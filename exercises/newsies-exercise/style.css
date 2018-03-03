@@ -8,13 +8,13 @@ body {
 
 div {
     margin: auto;
-    border: 8px solid white; 
+    border: 8px solid white;
 }
 
-.ad { 
+.ad {
     display: inline-block;
     height: 165px;
-    width:  19%;
+    width: 19%;
     text-align: center;
 }
 
@@ -35,7 +35,7 @@ div {
     background-position: center;
 }
 
-.headers { 
+.headers {
     height: auto;
     display: inline-block;
     background-image: url("https://i.imgur.com/CwBM6zU.jpg");
@@ -52,7 +52,7 @@ h1 {
     text-align: center;
 }
 
-h2{
+h2 {
     font-size: 35px;
     line-break: normal;
 }
@@ -60,11 +60,12 @@ h2{
 h3 {
     font-size: 24px;
     font-weight: 300;
-} 
-    h4 {
-        font-style: italic;
-        font-weight: 200;
-    }
+}
+
+h4 {
+    font-style: italic;
+    font-weight: 200;
+}
 
 img {
     width: 100%;
@@ -87,7 +88,6 @@ img {
 
 .captions {
     font-style: italic;
-
     font-size: 18px;
     text-align: left;
     font-weight: bold
