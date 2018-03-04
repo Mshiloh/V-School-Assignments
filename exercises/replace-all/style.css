@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    margin: auto;
+    border: 8px solid white;
+}
+
+section {
+    display: inline-block;
+    height: 165px;
+    width: 19%;
+    text-align: center;
+}
+
+.adTitle {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.adImg {
+    height: 150px;
+    width: auto;
+}
+
+header {
+    height: 200px;
+    background-image: url("https://i.imgur.com/PLjNq4p.jpg");
+    background-size: 1000px;
+    background-position: center;
+}
+
+#subhead {
+    height: auto;
+    display: inline-block;
+    background-image: url("https://i.imgur.com/CwBM6zU.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    width: 100%;
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: 75px;
+    line-height: .9;
+    text-align: center;
+}
+
+h2 {
+    font-size: 35px;
+    line-break: normal;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+h4 {
+    font-style: italic;
+    font-weight: 200;
+}
+
+img {
+    width: 100%;
+}
+
+article {
+    height: auto;
+    display: inline-block;
+    background-color: white;
+    margin-top: 50px;
+    width: 33%;
+    float: left;
+}
+
+.paragraphs {
+    font-size: 18px;
+    text-indent: 50px;
+    margin-bottom: 40px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold
+}
