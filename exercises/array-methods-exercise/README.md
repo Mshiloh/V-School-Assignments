@@ -1,0 +1,3 @@
+# Array Methods Exercise
+
+Here lies the code for my V School array methods exercise...
