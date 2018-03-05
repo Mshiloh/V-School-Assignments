@@ -29,9 +29,9 @@ var letterArr = ["A", "B", "C"];
 
 function compareLetterVsNumber ([i], y) {
     if (letterArr[i].charCodeAt(letterArr) > y) {
-        console.log(letterArr[i] + " is greater than " + y);
+        console.log(letterArr[i] + " is greater than " + y + ".");
     } else {
-        console.log(letterArr[i] + " is less than " + y);
+        console.log(letterArr[i] + " is less than " + y + ".");
     }
 }
 

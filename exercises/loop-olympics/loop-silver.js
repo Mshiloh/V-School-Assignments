@@ -1,59 +1,58 @@
 //Silver 1
 
-var peopleArray = [  
-    {
-      name: "Harrison Ford",
-      occupation: "Actor"
-    },
-    {
-      name: "Justin Bieber",
-      occupation: "Singer"
-    },
-    {
-      name: "Vladimir Putin",
-      occupation: "Politician"
-    },
-    {
-      name: "Oprah",
-      occupation: "Entertainer"
-    }
-  ]
+var peopleArray = [{
+    name: "Harrison Ford",
+    occupation: "Actor"
+  },
+  {
+    name: "Justin Bieber",
+    occupation: "Singer"
+  },
+  {
+    name: "Vladimir Putin",
+    occupation: "Politician"
+  },
+  {
+    name: "Oprah",
+    occupation: "Entertainer"
+  }
+]
 
-  for (i = 0; i < peopleArray.length; i++) {
-    console.log(peopleArray[i].name);
+for (i = 0; i < peopleArray.length; i++) {
+  console.log(peopleArray[i].name);
 }
 
 
 //Silver 2
 
-var nameResult = [];
+var nameArr = [];
 
-var occupationResult= [];
+var occupationArr = [];
 
 for (var i = 0; i < peopleArray.length; i++) {
-    nameResult.push(peopleArray[i] ["name"]);
-    occupationResult.push(peopleArray[i][ "occupation"]);
+  nameArr.push(peopleArray[i]["name"]);
+  occupationArr.push(peopleArray[i]["occupation"]);
 }
 
-console.log(nameResult);
+console.log(nameArr);
 
-console.log(occupationResult);
+console.log(occupationArr);
 
 
 //Silver 3
 
-var nameResult = [];
+var nameArr = [];
 
-var occupationResult= [];
+var occupationArr = [];
 
 for (var i = 0; i < peopleArray.length; i++) {
   if (i % 2 === 0) {
-    nameResult.push(peopleArray[i].name);
+    nameArr.push(peopleArray[i].name);
   } else {
-    occupationResult.push(peopleArray[i].occupation);
+    occupationArr.push(peopleArray[i].occupation);
   }
 }
 
-console.log(occupationResult);
+console.log(nameArr);
 
-console.log(nameResult);
+console.log(occupationArr);

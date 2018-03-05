@@ -1,5 +1,7 @@
 //Gold 1
 
+//j = column; i = row
+
 var output = [];
 
 for (var i = 0; i < 3; i++) {
