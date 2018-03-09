@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Super Mario 256';
+    src: url('http://www.fontsaddict.com/fontface/super-mario-256.ttf');
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: .10;
+    background-color: rgb(241, 0, 0);
+    background-color: gold;
+}
+
+h1 {
+    text-indent: 50px;
+    font-family: 'Super Mario 256';
+    font-size: 50px;
+    color: rgb(241, 0, 0);
+}
+
+section {
+    display: flex;
+    flex: .40;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 0, 0);
+}
+
+.luigi {
+    background-image: url("https://coursework.vschool.io/content/images/2015/07/luigi.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 85%;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex: .40;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(241, 0, 0);
+}
+
+h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-family: 'Super Mario 256';
+    font-size: 40px;
+}
+
+p {
+    width: 50%;
+    padding: 15px;
+    font-family: "Arial Black", sans-serif;
+    font-weight: bolder;
+    font-size: 19px;
+}
+
+footer {
+    display: flex;
+    flex: .10;
+    background-color: gold;
+    justify-content: center;
+    align-items: center;
+}
+
+.mushroom {
+    background-image: url("https://coursework.vschool.io/content/images/2015/07/greenmushroom.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 98%;
+    width: 99%;
+    background-position: right;
+}
