@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>"At Least it's Not Delta" Airlines</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Arimo:700|family=Lato|Open+Sans|Oswald|Raleway|Roboto|Biryani:800|Fugaz+One|Montserrat+Subrayada:700|Montserrat:700|Neuton:700|Noto+Sans:700|Palanquin+Dark:500|Playfair+Display+SC:900|Playfair+Display:900|Sura:700"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <br />'At Least it's Not Delta' Airlines</h1>
+    </header>
+
+    <nav></nav>
+
+    <main>
+        <form id="submit" name "userInfo">
+
+            <h2>Passenger Information</h2>
+
+            <!-- first and last name text input -->
+            <h3>Name:</h3>
+            <input id="firstName" type="text" placeholder="Enter First Name" /> &nbsp;&nbsp;
+            <input id="lastName" type="text" placeholder="Enter Last Name" />
+
+            <!-- age number input-->
+            <h3>Age:</h3>
+            <input id="age" type="number" min="0" placeholder="Enter Age" />
+
+            <!-- gender input radio buttons (2 or more options)-->
+            <h3>Gender:</h3>
+            <div>
+                <label for="female">Female:
+                    <input type="radio" name="gender" value="Female" id="female">
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="male">Male:
+                    <input type="radio" name="gender" value="Male" id="male">
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="jenner">A Little Bit of Everything:
+                    <input type="radio" name="gender" value="A Little Bit of Everything" id="jenner">
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="ratherNot">Rather Not Say:
+                    <input type="radio" name="gender" value="Rather Not Say" id="ratherNot">
+                </label>
+            </div>
+            <!-- location, select box (at least 3 or more locations) -->
+            <h3>Location:</h3>
+            <select name="destination" id="destination" value="none">
+                <option value="None Chosen">Choose your destination</option>
+                <option value="Beijing, China">Beijing, China</option>
+                <option value="Puerto Maldonado, Peru">Puerto Maldonado, Peru</option>
+                <option value="Nairobi, Kenya">Nairobi, Kenya</option>
+                <option value="Your Weird Uncle's House: Frankfurt, Kentucky, United States">Your Weird Uncle's House: Frankfurt, Kentucky, United States</option>
+            </select>
+
+            <!-- dietary restrictions, checkboxes (vegan, vegitarian, kosher, lactose-free, etc.) -->
+            <h3>Dietary Restrictions:</h3>
+            <div id="dietaryRestrictions">
+            <label for="vegan">Vegan:
+                <input type="checkbox" name="Vegan" id="vegan">
+            </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="vegitarian">Vegitarian:
+                <input type="checkbox" name="Vegitarian" id="vegitarian">
+            </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="solelyCarnivorous">Solely Carnivorous:
+                <input type="checkbox" name="Solely Carnivorous" id="solelyCarnivorous">
+            </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="kosher">Kosher:
+                <input type="checkbox" name="Kosher" id="kosher">
+            </label>
+        </div>
+            <br />
+            <button onclick="submitButton()">SUBMIT</button>
+            <p id="output"></p>
+
+        </form>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
