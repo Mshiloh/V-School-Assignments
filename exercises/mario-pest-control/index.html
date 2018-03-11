@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Mario's Pest Control</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Arimo:700|family=Lato|Open+Sans|Oswald|Raleway|Roboto|Biryani:800|Fugaz+One|Montserrat+Subrayada:700|Montserrat:700|Neuton:700|Noto+Sans:700|Palanquin+Dark:500|Playfair+Display+SC:900|Playfair+Display:900|Sura:700"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <nav>
+            Home &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; About &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Services &nbsp;&nbsp;&nbsp; |
+            &nbsp;&nbsp;&nbsp; Mario's Guarantee
+        </nav>
+
+        <header>
+            <h1>Mario's Pest Control</h1>
+        </header>
+
+        <main>
+
+            <section id="goomba">
+                <img src="https://vignette.wikia.nocookie.net/nintendo/images/d/d5/GoombaNSMB.png/revision/latest?cb=20110724131649&path-prefix=en"
+                    alt="Goomba">
+                <p>
+                    <li>Type: Goomba</li>
+                    <li id="price">Price: 5 Coins</li>
+                    <li>
+                        <input type="number" id="add1" placeholder="Number Caught" />
+                    </li>
+                </p>
+            </section>
+
+            <section id="bobombs">
+                <img src="https://vignette.wikia.nocookie.net/mario/images/7/79/Bob-omb_%28Mario_Kart_8%29.png/revision/latest?cb=20140505194042"
+                    alt="Bob-ombs">
+                <p>
+                    <li>Type: Bob-ombs</li>
+                    <li id="priceBobomb"></li>Price: 7 Coins</li>
+                    <li>
+                        <input type="number" id="add2" placeholder="Number Caught" />
+                    </li>
+                </p>
+            </section>
+
+            <section id="cheepcheeo">
+                <img src="https://pre00.deviantart.net/f1cb/th/pre/i/2012/028/7/a/cheep_cheeps_by_yoshigo99-d4nv77g.png" alt="Cheep-cheeps">
+                <p>
+                    <li>Type: Cheep-cheeps</li>
+                    <li id="price"></li>Price: 11 Coins</li>
+                    <li>
+                        <input type="number" id="add3" placeholder="Numbers Caught" />
+                    </li>
+                </p>
+            </section>
+
+        </main>
+
+        <div id="total">
+            <button id="addBut" onclick="add()">Total Coins</button>
+            <input type="number" id="sum" readonly="readonly" />
+
+        </div>
+
+        <footer>
+            Email: mario@gmail.com &nbsp; | &nbsp; Website: www.mariopestconrol.com &nbsp; | &nbsp; Address: 376 E Peach Lane, Mini Game
+            City, 85332, Mario World
+        </footer>
+
+        <script src="script.js"></script>
+
+    </div>
+
+</body>
+
+</html>
