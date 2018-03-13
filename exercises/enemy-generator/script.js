@@ -1,4 +1,4 @@
-//Contructor function that makes an object with three properties (type, hitPoints, and defense)
+//Create a contructor function that makes an object with three properties (type, hitPoints, and defense)
 
 var Enemy = function () {
     this.type = genRandomTypes();
