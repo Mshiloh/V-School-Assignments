@@ -1,0 +1,50 @@
+{
+    "menu": {
+        "appetizers": [{
+            "name": "C++food Shrimp and Crab Platter",
+            "indgredients": ["shrimp", "crab", "cocktail sauce", "garlic butter sauce"],
+            "description": "Five delectable jumbo shrimp with a tangy cocktail sauce and fresh steamed crab with a creamy garlic butter sauce "
+        }, {
+            "name": "charBroiled Sliders",
+            "indgredients": ["hamburger", "cheddar cheese", "lettuce", "pickles", "onions", "signature sauce", "bun"],
+            "description": "Four bite-sized charbroiled burgers with crispy lettuce, pickles, and onions, smothered in our signature sauce on fresh mini artisan buns"
+        }],
+        "coldSandwiches": [{
+            "name": "Corned Beef Array(onRye)",
+            "indgredients": ["sauerkraut", "corned beef", "swiss cheese", "rye bread"],
+            "description": "Homestyle corned beef with saukernaut on fresh rye bread"
+        }, {
+            "name": "Function Fish",
+            "indgredients": ["halibut", "mayo", "tartar sauce", "pickles", "bun"],
+            "description": "Hand-battered halibut with house-made tartar sauce on an artisan bun with a side of pickles"
+        }],
+        "hotSandwiches": [{
+            "name": "Chicken CodeOn Bleu Sub",
+            "indgredients": ["chicken", "ham", "swiss cheese", "pineapple", "white french bread"],
+            "description": "Tender chicken with sliced ham topped with swiss cheese and pineapple on freshly baked french bread"
+        }, {
+            "name": "The Big Byte",
+            "indgredients": ["steak", "onions", "signature sauce", "Texas Toast"],
+            "description": "Sizzling hand-cut steak topped with carmelized onions and our signature sauce on thick Texas Toast"
+        }],
+        "desserts": [{
+            "name": "banana.split()",
+            "indgredients": ["vanilla icecream", "chocolate syrup", "bananas", "peanuts"],
+            "description": "Classic banana split drizzled with delicious chocolate syrup, sprinkled with chopped peanuts"
+        }, {
+            "name": "If Delicious Cheesecake with No Else",
+            "indgredients": ["cheesecake", "strawberries", "whipped cream"],
+            "description": "Rich and creamy New York style cheesecake topped with juicy strawberries and whipped cream"
+        }],
+
+        "drinks": [{
+            "name": "HTeaTeaP",
+            "indgredients": ["sugar", "sweet iced tea", "lemon wedge"],
+            "description": "Refreshing sweet iced tea with lemon"
+        }, {
+            "name": "Default DC",
+            "indgredients": ["diet coke", "lime wedge"],
+            "description": "Cool diet Coke with lime wedge"
+        }]
+    }
+}
