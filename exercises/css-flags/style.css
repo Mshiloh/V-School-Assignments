@@ -1,0 +1,274 @@
+/* CSS Grid */
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+p {
+    font-size: 26px;
+    font-family: sans-serif;
+    margin-top: 30px;
+    /* margin-bottom: 10px; */
+}
+
+/* France */
+
+.franContainer {
+    display: grid;
+    height: 300px;
+    width: 450px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.franBlue {
+    background-color: #002496;
+}
+
+.franWhite {
+    background-color: white;
+}
+
+.franRed {
+    background-color: #EE2839;
+}
+
+/* Germany */
+
+.germContainer {
+    display: grid;
+    height: 275px;
+    width: 450px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.germBlack {
+    background-color: black;
+}
+
+.germRed {
+    background-color: #DC0000;
+}
+
+.germYellow {
+    background-color: #FECE00;
+}
+
+/* Madagascar */
+
+.madContainer {
+    display: grid;
+    height: 300px;
+    width: 450px;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "mad1 mad2" "mad1 mad3";
+}
+
+.mad1 {
+    grid-area: mad1;
+    background-color: white;
+}
+
+.mad2 {
+    grid-area: mad2;
+    background-color: #FC3E32;
+}
+
+.mad3 {
+    grid-area: mad3;
+    background-color: #017F38;
+}
+
+/* Switzerland */
+
+.switzContainer {
+    display: grid;
+    height: 350px;
+    width: 350px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.switzContainer div {
+    text-align: center;
+}
+
+.topbot, .rr2, .rr3, .rr4 {
+    background-color: #FE0000;
+}
+
+.rw2 {
+    background-color: white;
+}
+
+
+/* Sweden */
+
+.swedContainer {
+    display: grid;
+    height: 275px;
+    width: 430px;
+    grid-template-columns: 1.1fr .45fr 2fr;
+    grid-template-rows: 1fr .45fr 1fr;
+}
+
+.swedBlue1 {
+    background-color: #006BA6;
+}
+
+.swedYellow1, .swedYellow2 {
+    background-color: #FFCC03;
+}
+
+/* Gambia */
+.gamContainer {
+    width: 412px
+}
+
+.gamRed {
+    background-color: #D40E25;
+    height: 90px;
+}
+
+.gamBlue {
+    background-color: #0D1A93;
+    height: 60px;
+    margin-top: 14px;
+    margin-bottom: 14px;    
+}
+
+.gamGreen {
+    background-color: #3A7729;
+    height: 90px;
+}
+
+/* Tonga */
+
+.tonContainer {
+    display: grid;
+    height: 240px;
+    width: 470px;
+    grid-template-columns: .8fr .35fr .35fr .35fr .8fr 3.5fr;
+    grid-template-rows: .3fr .5fr .5fr .5fr .3fr 2fr;
+}
+
+.tonOutsideW, .tonW3, .tonW2, .tonTopbot {
+    background-color: white;
+}
+
+
+.tonTopbotR, .tonR2, .tonR3, .tonR4, .tonOutside {
+    background-color: #C10000;
+}
+
+
+/* Japan */
+
+.japaContainer {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+}
+
+.japaBehind {
+    background-color: white;
+    height: 250px;
+    width: 350px;
+}
+
+.japaFront {
+    background-color: #BB002D;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    z-index: Z;
+    transform: translateX(115px) translateY(75px);
+}
+
+/* Greece */
+
+.greContainer {
+    display: grid;
+    height: 260px;
+    width: 400px;
+    grid-template-columns: 1fr .5fr 1fr 4.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "blu whi blu blu" "blu whi blu whi" "whi whi whi blu" "blu whi blu whi" "blu whi blu blu" "whi whi whi whi"Î "blu blu blu blu" "whi whi whi whi" "blu blu blu blu"
+}
+
+.greBlu {
+    background-color: #0D5EAF;
+}
+
+.greWhi {
+    background-color: white;
+}
+
+/* Nigeria */
+.nigeContainer {
+    display: grid;
+    height: 350px;
+    width: 390px;
+    grid-template-columns: 3.5fr 2.5fr 3.5fr;
+    grid-template-rows: 1fr 1.1fr 1fr;
+}
+
+.oj {
+    background-color: #E05206;
+}
+
+.whi {
+    background-color: white;
+}
+
+.cir {
+    background-color: #E05206;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gre {
+    background-color: #0CB02B;
+}
+
+/* Maldives */
+
+/* .malContainer {
+    display: grid;
+    height: 300px;
+    width: 450px;
+    grid-template-rows: 1fr;
+} */
+
+.malOuter {
+    height: 275px;
+    width: 400px;
+    background-color: #017E3A;
+    border: 65px solid #CC1431;
+}
+
+.malMoon{
+    background-color: white;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    transform: translateX(170px) translateY(95px);
+}
+
+.malMoonLayer {
+    background-color: #017E3A;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    transform: translateX(185px) translateY(95px);
+}
