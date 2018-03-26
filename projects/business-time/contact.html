@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Contact</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="flex-grid">
+
+        <header class="col">
+            <h1>NO REGERTS INK</h1>
+        </header>
+
+        <nav class="col">
+            <a href="http://127.0.0.1:5500/assignments/projects/business-time/index.html">HOME</a>
+            <a href="http://127.0.0.1:5500/assignments/projects/business-time/gallery.html">GALLERY</a>
+            <a href="http://127.0.0.1:5500/assignments/projects/business-time/contact.html">CONTACT US</a>
+        </nav>
+        
+        <form id="contactBox">
+            <h1 class="contactHeader">CONTACT FORM</h1>
+            <div class="container">
+                <form id="contactForm">
+                    <label for="first">
+                        <p class="formInfo">First Name</p>
+                    </label>
+                    <input type="text" id="first" name="first" placeholder="First Name">
+
+                    <label for="last">
+                        <p class="formInfo">Last Name</p>
+                    </label>
+                    <input type="text" id="last" name="last" placeholder="Last Name">
+
+                    <label for="country">
+                        <p class="formInfo">Email</p>
+                    </label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+
+                    <label for="country">
+                        <p class="formInfo">Phone</p>
+                    </label>
+                    <input type="number" id="phone" name="phone" placeholder="(XXX) XXX-XXX">
+
+                    <label for="subject">
+                        <p class="formInfo">Message</p>
+                    </label>
+
+                    <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+
+                    <form method="post" action="mailto:mshiloh.code@gmail.com">
+
+                        <button onclick="" type="submit" class="button" value="Send Email">Submit</button>
+
+                        <!-- <input type="submit" class="button" value="Send Email"> -->
+                    </form>
+
+                </form>
+
+            </div>
+        </form>
+
+        <div class="col contact">
+            <div>
+                <p class="contactInfo">
+                    Address:
+                    <br />
+                    <Address>445 E Miztayks Boulevard
+                        <br /> New York City, NY 10001
+                    </Address>
+                    <br /> Phone:
+                    <br />
+                    <Phone:></Phone:>
+                    <i>(555) - 349-9963</i>
+                    </Phone:>
+                </p>
+            </div>
+
+            <div>
+                <img class="map" src="https://i.imgur.com/XyEeBZz.jpg" alt="map">
+            </div>
+
+        </div>
+
+        <footer class="col">
+            &copy; 2018, &nbsp; No Regerts Ink
+            <img class="socialMedia" src="https://i.imgur.com/NQytVZd.png" alt="Social Media Icons">
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
