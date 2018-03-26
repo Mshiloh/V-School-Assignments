@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 25px;
+}
+
+.container {
+    display: grid;
+    /* grid-gap: 10px; */
+    height: 50;
+    grid-template-columns: 1ft 1ft 1ft;
+    grid-template-rows: 1ft 1ft 1ft;
+    grid-template-areas: "bx1 bx2 bx3" "bx4 bx5 bx6";
+}
+
+h1 {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+
+.box1 {
+    grid-area: bx1;
+    transition-duration: 2s;
+    background-color: goldenrod;
+}
+
+.box1:hover {
+    background-color: rgb(0, 0, 139);
+    height: 0;
+    width: 0;
+    border-left: 100px solid;
+    border-right: 100px transparent;
+    border-bottom: 100px transparent;
+    border-top: 100px solid;
+}
+
+.box2 {
+    grid-area: bx2;
+    background-color: rgb(0, 63, 63);
+    transition-duration: 1.5s;
+    opacity: 1;
+}
+
+.box2:hover {
+    grid-area: bx2;
+    opacity: 0;
+}
+
+.box3 {
+    grid-area: bx3;
+    transition-duration: 1.5s;
+    border: 20px solid teal;
+    opacity: 0.1;
+}
+
+.box3:hover {
+    border-radius: 50%;
+    background-image: url("https://d2jv9003bew7ag.cloudfront.net/uploads/Tatiana-Plakhova-%E2%80%93-Music-Portraits-series.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    border: none;
+    transform: rotate(360deg);
+}
+
+.box4 {
+    grid-area: bx6;
+    background-color: black;
+    transition-duration: 1.5s;
+}
+
+.box4:hover {
+    border: 4px dashed #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px black;
+    transform: rotate(360deg);
+}
+
+.box5 {
+    grid-area: bx5;
+    transition-duration: 1.5s;
+    background-color: rgb(44, 17, 66);
+    opacity: 0.9;
+}
+
+.box5:hover {
+    transform: scale(3);
+    box-shadow: 2px 2px rgb(29, 28, 28), 3px 3px rgb(29, 28, 28), 4px 4px rgb(29, 28, 28);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.box6 {
+    transition-duration: 2s;
+    opacity: 0.1;
+}
+
+.box6:hover {
+    background-image: url("http://hdwpro.com/wp-content/uploads/2017/10/Nice-Scenery-Background.jpg");
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
