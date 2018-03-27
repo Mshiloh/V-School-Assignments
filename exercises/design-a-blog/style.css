@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif
+}
+
+@font-face {
+    font-family: "Chalet New York Nineteen Eighty";
+    src: local("ChaletNewYorkNineteenEighty"), url("ChaletNewYorkNineteenEighty.ttf");
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "hd hd" "nav nav" "hdr hdr" "side cont" "ftr ftr";
+}
+
+header {
+    grid-area: hd;
+    margin-top: 10px;
+    background-image: url("https://i.imgur.com/cSEiTOG.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: auto;
+}
+
+nav {
+    grid-area: nav;
+    position: fixed;
+    background-color: #DB4920;
+    font-size: 20px;
+    width: 100%;
+    font-family: "Chalet New York Nineteen Eighty";
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+a {
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.container div {
+    text-align: center;
+    vertical-align: middle;
+}
+
+h1 {
+    grid-area: hdr;
+    color: #DB4920;
+    font-family: "Chalet New York Nineteen Eighty";
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    margin-top: 30px;
+}
+
+section {
+    border-top: 4px solid #DB4920;
+    border-top-style: dashed;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-left: 52px;
+    font-style: italic;
+    text-align: left;
+}
+
+.sidebar {
+    grid-area: side;
+    border-right: 4px solid #DB4920;
+    border-right-style: dashed;
+    border-bottom: 4px solid #DB4920;
+    border-bottom-style: dashed;
+}
+
+.content {
+    grid-area: cont;
+    border-bottom: 4px solid #DB4920;
+    border-bottom-style: dashed;
+}
+
+p {
+    padding: 20px;
+}
+
+img {
+    margin-top: 20px;
+    width: 75%;
+}
+
+footer {
+    grid-area: ftr;
+    background-color: #DB4920;
+    height: 40px;
+    vertical-align: middle;
+    color: whitesmoke;
+    line-height: 40px;
+}
