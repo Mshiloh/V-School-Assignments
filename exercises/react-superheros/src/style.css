@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+img {
+    max-height: 500px;
+}
+
+h1, h2 {
+    margin-top: 30px;
+}
+
+p {
+    font-size: 20px;
+}
