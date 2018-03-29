@@ -5,7 +5,7 @@ function Pet(props) {
         <li>
             <h4>Pet Name: {props.pet.petname}</h4>
             <h4>Breed: {props.pet.breed}</h4>
-            <hr className="hrMain" />
+            <hr className="hrSub" />
             {/* all the other info */}
         </li>
     )

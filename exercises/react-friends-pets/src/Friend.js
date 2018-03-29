@@ -12,7 +12,7 @@ function Friend(props) {
                 <ul>
                     {pets}
                 </ul>
-            <hr className="hrMain2"/>
+            <hr className="hrMain"/>
         </div>
     )
 };
