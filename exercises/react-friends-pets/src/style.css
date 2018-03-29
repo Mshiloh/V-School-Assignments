@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin-left: 10px;
+    font-family: 'Gill Sans MT', sans-serif;
+    line-height: 35px;
+}
+
+
+body {
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+header {
+    background-image: 
+    url("http://www.csszengarden.com/214/contours.png"), 
+    url("http://www.csszengarden.com/214/noise.png"),
+    url("http://www.csszengarden.com/214/gridlines.png"),
+    url("http://www.csszengarden.com/214/huntington.jpg");
+}
+
+h2 {
+    text-indent: 50px;
+}
+
+h3, h4 {
+    text-indent: 90px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+h5 {
+    text-indent: 120px;
+    font-size: 20px;
+}
+
+.hrMain {
+border: 1px dashed grey;
+}
+.hrMain2 {
+    border: 3px solid black;
+    }
+
+ul {
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
