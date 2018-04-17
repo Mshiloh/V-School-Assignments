@@ -22,10 +22,20 @@ for (var i = 0; i < input.length; i++) {
 
 console.log(result);
 
+
 //Improvements & Experiments to Try:
 
 //opt. try creating decode function 
+//97 - 26 % (shift - 97 + result)
 //decode using inputChar or result + 97? perhaps (inputChar or result + 97 - shift) * 26 - 97?
+//nope...
+// function decode (){
+//     return (97 - 26) % shift - 97 + result;
+// }
+
+// let decoded = decode();
+
+// console.log(decoded);
 
 //opt. try: allowing all char codes to be encrypted
 //remove toLowerCase, change if parameters 32-122, change % 26 to % 95 ()

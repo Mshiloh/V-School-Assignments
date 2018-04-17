@@ -1,0 +1,94 @@
+/* ALL */
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: "Azedo Bold";
+    src: local("Azedo-Bold"), url("Azedo-Bold.otf");
+}
+
+@font-face {
+    font-family: "Azedo Light";
+    src: local("Azedo-Light"), url("Azedo-Light.otf");
+}
+
+.container {
+    display: grid;
+    height: 200vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr .3fr 1fr 1fr 1fr .5fr;
+    grid-template-areas: "hdr hdr hdr" "nav nav nav" "gal1 gal1 gal1" "gal2 gal2 gal2" "gal3 gal3 gal3" "ftr ftr ftr";
+    background-color: rgb(47, 47, 48);
+}
+
+.container div {
+    text-align: center;
+}
+
+header {
+    grid-area: hdr;
+    background-image: url("https://i.imgur.com/H2KTlml.jpg");
+    background-size: cover;
+    background-position: top;
+    color: rgb(253, 242, 227);
+    font-size: 250px;
+    text-align: center;
+    font-family: "Azedo Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: nav;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(253, 242, 227);
+}
+
+a {
+    text-decoration: none;
+    font-family: "Azedo Light";
+    font-size: 35px;
+    color: black;
+}
+
+img {
+    width: 100%;
+    border: 10px solid rgb(253, 242, 227);
+    background-color: rgb(253, 242, 227);
+    
+    
+}
+
+.gal1 {
+    grid-area: gal1;
+}
+
+.gal2 {
+    grid-area: gal2;
+}
+
+.gal3 {
+    grid-area: gal3;
+}
+
+.img21,
+.img13,
+.img33 {
+    width: 150%;
+}
+
+.img13 {
+    width: 150%;
+}
+
+footer {
+    grid-area: ftr;
+}

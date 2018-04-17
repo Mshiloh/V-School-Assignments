@@ -1,7 +1,7 @@
 //pull box element
 var box = document.getElementById("box");
 
-//create function to change colors based on mouse action
+//create function (use switch) to change colors based on mouse action
 function boxColor(event) {
     switch (event.type) {
         case "mouseover":
@@ -29,7 +29,7 @@ box.addEventListener("mouseup", boxColor);
 box.addEventListener("dblclick", boxColor);
 box.addEventListener("mousewheel", boxColor);
 
-//create a function to change the color based on key press
+//create a function (use switch) to change the color based on key press
 //collect character codes for b, r, y, g, and o
 function keyColor(event) {
     switch (event.which) {

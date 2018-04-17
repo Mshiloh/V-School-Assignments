@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "BIG JOHN";
+  src: local("BIG JOHN"), url("BIG JOHN.otf");
+}
+
+@font-face {
+  font-family: "ZonaPro ExtraLight";
+  src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
+}
+
+@font-face {
+  font-family: "Slim Joe";
+  src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
+.wrapper {
+  display: grid;
+  height: 150vh;
+  width: 100vw;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "nav" "bnr" "tag" "abt" "prj" "con" "ftr";
+}
+
+nav {
+  grid-area: nav;
+  position: fixed;
+  float: top;
+  background-color: 	rgba(59, 59, 59, 0.863);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  font-family: "ZonaPro ExtraLight";
+  color: #C4B19E;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+}
+
+header {
+  grid-area: hdr;
+  width: 100vw;
+  background-image: url("https://i.imgur.com/FRtjuUF.jpg");
+  /* background-color: black; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerClip {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.banner {
+  grid-area: bnr;
+  font-family: "Slim Joe";
+}
+
+.taglineClip {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.tagline {
+  grid-area: tag;
+  font-family: "ZonaPro ExtraLight";
+}
+
+[class*="cube"] {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  animation: ani 10s infinite linear;
+}
+
+.cube__face {
+  width: 9em;
+  height: 9em;
+  box-shadow: inset rgba(212, 188, 164, 0.671) 0 0 3px;
+  --i: 0;
+  transform: rotate3d(var(--i), calc(1 - var(--i)), 0, calc(var(--m, 0)*90deg)) translateZ(4.5em);
+}
+
+.cube__face:nth-child(n+5) {
+  --i: 1;
+}
+
+.cube__face:nth-child(2) {
+  --m: 1;
+}
+
+.cube__face:nth-child(3) {
+  --m: 2;
+}
+
+.cube__face:nth-child(4) {
+  --m: 3;
+}
+
+.cube__face:nth-child(5) {
+  --m: 1;
+}
+
+@keyframes ani {
+ 100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+.about {
+  grid-area: abt;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8AHqvKC1ZjclpsbX19S95GN689gknCaYwqU-MU-qynVD4yoy");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.projects {
+  grid-area: prj;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8AHqvKC1ZjclpsbX19S95GN689gknCaYwqU-MU-qynVD4yoy");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact {
+  grid-area: con;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/UYm1iis.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;  
+}
+
+#contactBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.contactHeadContiner {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-top: 2vh;
+}
+
+.contactHeader {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "Slim Joe";
+}
+
+input,
+select,
+textarea {
+  font-family: "ZonaPro ExtraLight";
+  width: 100%;
+  padding: 12px;
+  border: 1px inset solid rgb(163, 73, 73);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+#message {
+  width: 100%;
+}
+
+.formInfo,
+.button {
+  color: rgb(187, 162, 138);
+  font-family: "ZonaPro ExtraLight";
+  width: 80vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+}
+
+button {
+  width: 100%;
+  color: rgb(187, 162, 138);
+  border: rgba(255, 255, 255, 0);
+  background: none;
+  margin-bottom: 2vh;
+}
+
+footer {
+  grid-area: ftr;
+  position: bottom;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1vh;
+  color: tomato;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+  nav {
+    height: 5vh;
+  }
+  .nav {
+    font-size: 2.5vw;
+    margin-left: -5vw;
+  }
+  header {
+    height: 45vh;
+  }
+  .banner {
+    margin-top: 4vh;
+    font-size: 11vw;
+  }
+  .tagline {
+    font-size: 5vw;
+  }
+
+  .cube {
+    font-size: 2.3vw;
+  }
+  /* .about {}
+
+  .projects {} */
+
+  .contact {
+    grid-area: con;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  .contactHeader {
+    font-size: 6vw;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 2vw;
+    width: 100%;
+  }
+  #message {
+    height: 15vh;
+    width: 100%;
+  }
+  button {
+    font-size: 2vw;
+  }
+  footer {
+    font-size: 2.5vw;
+  }
+}

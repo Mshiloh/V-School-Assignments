@@ -1,6 +1,5 @@
 body {
-    font-family: 'Raleway', sans-serif;    
-}
+    font-family: 'Raleway', sans-serif;    }
 
 header {
     float: left;
@@ -35,6 +34,13 @@ h3 {
 
 form {
     margin: 50px;
+    width: 75%;
+    
+}
+
+#firstName, #lastName {
+    display: inline-block;    
+    justify-content: space-evenly;
 }
 
 input {
@@ -47,10 +53,23 @@ p {
     font-size: 18px;
 }
 
+.gender {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 select{
     font-family: 'Raleway', sans-serif;        
     font-size: 16px;
+    margin-bottom: 20px;   
 }
+
+#dietaryRestrictions{
+    display: flex;    
+    justify-content: space-evenly;
+
+}
+
 button {
     margin-top: 30px;
     font-family: 'Raleway', sans-serif;        

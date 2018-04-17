@@ -11,12 +11,7 @@ arrStr = loopEx1(str);
 
 console.log(arrStr);
 
-
 //Exercise 2
-var str2 = "I sure do love Old Yeller, here's to a long, rabies-free life!";
-
-var x = "I";
-
 function loopEx2(str2, x) {
     for (i = 0; i < str2.length; i++)
         if (str2.includes(x)) {
@@ -26,7 +21,7 @@ function loopEx2(str2, x) {
         }
 }
 
-console.log(loopEx2(str2, x));
+console.log(loopEx2("I sure do love Old Yeller, here's to a long, rabies-free life!", "I"));
 
 //Exercise 3
 var numArr = [1, 32, 46, 42, 76];
@@ -44,7 +39,7 @@ function loopEx3(numArr) {
 
 loopEx3(numArr);
 
-// Exercise 4
+// // Exercise 4
 var arr10 = [];
 
 function createArr() {

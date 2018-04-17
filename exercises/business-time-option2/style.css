@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: "Coco Gothic Regular";
+    src: local("Coco-Gothic-Regular"), url("Coco-Gothic-Regular-trial.ttf");
+}
+
+@font-face {
+    font-family: "Walkway Black";
+    src: local("Walkway Black"), url("Walkway Black.ttf");
+}
+
+@font-face {
+    font-family: "Lombok Regular";
+    src: local("Lombok"), url("Lombok.otf");
+}
+
+@font-face {
+    font-family: "Aqua Grotesque Regular";
+    src: local("aqua"), url("aqua.ttf");
+}
+
+@font-face {
+    font-family: "Azedo Bold";
+    src: local("Azedo-Bold"), url("Azedo-Bold.otf");
+}
+
+@font-face {
+    font-family: "Azedo Light";
+    src: local("Azedo-Light"), url("Azedo-Light.otf");
+}
+
+@font-face {
+    font-family: "Chainsaw Geometric";
+    src: local("ChainsawGeometric"), url("ChainsawGeometric.ttf");
+}
+
+@font-face {
+    font-family: "Phantom Bold";
+    src: local("PhantomBold"), url("PhantomBold.otf");
+}
+
+/* HOME */
+.container {
+    display: grid;
+    height: 200vh;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 5fr .3fr 2fr 2fr .5fr;
+    grid-template-areas: "hdr hdr" "nav nav" "side main" "cont cont" "ftr ftr";
+    background-color: rgb(47, 47, 48);
+}
+
+.container div {
+    text-align: center;
+    border: 1px solid black;
+}
+
+header {
+    grid-area: hdr;
+    background-image: url("https://i.imgur.com/H2KTlml.jpg");
+    background-size: cover;
+    background-position: top;
+    color: rgb(253, 242, 227);
+    font-size: 250px;
+    text-align: center;
+    font-family: "Azedo Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: nav;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(253, 242, 227);  
+}
+
+a {
+    text-decoration: none;
+    font-family: "Azedo Light";
+    font-size: 35px;
+    color: black;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sidebarImg {
+    width: 100%;
+}
+
+.content {
+    grid-area: cont;
+}
+
+footer {
+    grid-area: ftr;
+}

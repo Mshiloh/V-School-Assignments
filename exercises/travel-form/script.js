@@ -12,7 +12,6 @@ var vegan = document.getElementById("vegan");
 var vegitarian = document.getElementById("vegitarian");
 var solelyCarnivorous = document.getElementById("solelyCarnivorous");
 var kosher = document.getElementById("kosher");
-var submit = document.getElementById("submit");
 
 var data = {
     firstName: "",
@@ -51,7 +50,7 @@ male.addEventListener("change", genderFunc);
 jenner.addEventListener("change", genderFunc);
 ratherNot.addEventListener("change", genderFunc);
 
-//Location Function
+//Destination Function
 destinationInput.addEventListener("input", function (event) {
     data.destination = event.target.value;
     console.log(data);    
@@ -69,11 +68,8 @@ function dietaryFunc(event) {
 }
 
 vegan.addEventListener("change", dietaryFunc);
-
 vegitarian.addEventListener("change", dietaryFunc);
-
 solelyCarnivorous.addEventListener("change", dietaryFunc);
-
 kosher.addEventListener("change", dietaryFunc);
 
 

@@ -1,4 +1,4 @@
-var log = console.log;
+const log = console.log;
 
 // 1a)
 function sum(x, y) {

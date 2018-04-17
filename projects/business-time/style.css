@@ -96,7 +96,6 @@ main {
 .contact {
     display: flex;
     height: 400px;
-    font-family: 'Montserrat', sans-serif;
     padding: 50px;
     align-items: center;
     justify-content: space-around;
@@ -111,24 +110,10 @@ main {
     height: 330px;
 }
 
-.meet {
-    display: flex;
-    font-family: "Elianto Regular";
-    height: 55px;
-    font-size: 35px;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 20px;
-    background-color: black;
-    color: white;
-}
-
 section {
     display: flex;
     align-content: center;
     justify-content: space-evenly;
-    font-family: "Yantramanav", sans-serif;
 }
 
 .text {

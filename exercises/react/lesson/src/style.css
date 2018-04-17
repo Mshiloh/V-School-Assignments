@@ -1,0 +1,23 @@
+* {
+box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app {
+  padding-top: 50px;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+button {
+  font-size: 2.5em;
+  width: 80px;
+  border-radius: 10px;
+  border: 4px solid black;
+}

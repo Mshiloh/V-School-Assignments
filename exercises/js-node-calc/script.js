@@ -5,7 +5,7 @@ console.log(num1);
 
 var num2 = readline.question("Please enter your second number");
 
-var choice = readline.question("Please enter the operation to perform: +, -, *, /")
+var choice = readline.question("Please enter the operation to perform: +, -, *, /");
 
 function numResult(choice) {
     if (choice === "+") {
