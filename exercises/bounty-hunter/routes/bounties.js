@@ -7,7 +7,16 @@ const port = 8080;
 
 bountyRouter.route("/")
     .get((req, res) => {
-        res.status(200).send(bounties);
+        const { query } = req;
+        const queriedBounty = bounties.filter(bounty => {
+            for (let key in query) {
+                if (!bounty.hasOwnProperty(key) || String(bounty[key]).toLowerCase() !== query[key]) {
+                    return false;
+                }
+            }
+            return true;
+        })
+        res.status(200).send(queriedBounty);
     })
 
     .post((req, res) => {
@@ -15,13 +24,14 @@ bountyRouter.route("/")
         newBounty._id = uuid();
         bounties.push(newBounty);
         res.status(201).send(newBounty);
-    });
+    })
 
-    bountyRouter.route("/:id")
+bountyRouter.route("/:id")
     .get((req, res) => {
+        console.log(req.params.id);
         const { id } = req.params;
-        const selectedBounty = todos.filter(bounty => bounty._id === id)[0];
-        res.status(200).send(selectedBounty);
+        const selectedBounty = bounties.filter(bounty => bounty._id === id)[0];
+        res.status(201).send(selectedBounty);
     })
 
     .delete((req, res) => {
@@ -37,4 +47,4 @@ bountyRouter.route("/")
         res.status(200).send(editedBounty);
     })
 
-    module.exports = bountyRouter;
+module.exports = bountyRouter;
