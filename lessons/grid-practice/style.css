@@ -1,0 +1,41 @@
+/* CSS Grid */
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.container {
+    display: grid;
+    /* rowpx comlumnpx*/
+    grid-gap: 10px 10px;
+    height: 100vh;
+    grid-template-columns: .2fr 1fr;
+    grid-template-rows: .3fr 2fr .3fr;
+    grid-template-areas: 
+    /* 1 row with 1 column - hdr */ "hdr hdr" 
+     /* 1 row w/ two columns each defined in the same quotations */ "side cont"
+     /* 1 ftr column */ "ftr ftr"
+}
+
+.container div {
+    text-align: center;
+}
+
+header {
+    grid-area: hdr;
+}
+
+.sidebar {
+    grid-area: side;
+}
+
+.content {
+    grid-area: cont;
+}
+
+footer {
+    grid-area: ftr;
+}
+

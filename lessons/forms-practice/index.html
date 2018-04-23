@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+
+    <!-- it's wise to give each of your forms a 'name' attribute, like below: -->
+
+    <form name="user-info">
+
+        <!-- There are many different kinds of input fields, and most of them still use 
+        the <input/> tag, but can be used by giving <input/> different attributes. The big 
+        one is 'type'. type defaults to text. So our "First Name" input box is already 
+        <input type="text"/> -->
+
+        <div id="first-name">Morgan</div>
+
+        <input type="text">
+
+        <!-- Number restricts the inputs to numbers, and give you up and down arrows to 
+            increment or decrement it. Number also has more attributes to help you control 
+            how the input box behaves. For type="number" the common ones are: min, max, step
+            Min and max are exactly what the sound like. They restrict the minimum and the 
+            maximum value of the input box. Step controls how much the up and down arrow 
+            move our number. Play around with this input box 
+            Number: <input step="10" type="number"/>: -->
+
+        <input step="10" type="number" />
+
+        <!-- Your step can also be decimals. Here is a list of just some of the other 
+            attributes you can give your input box:
+            * name - Important for naming and using your input boxes. Similar to id
+            * value - Value gives your input and initial value
+            * placeholder - Placeholder gives your user an example or hint of what belongs 
+            in an input box
+            required - From will not submit if you have this attribute in an empty input box
+            Many of these attributes are using by your browser to help with autofill. 
+            Especially the name attribute. If you say name="firstname", Chrome can autofill 
+            that for your user. -->
+
+        <form name="info">
+            <input name="age" />
+        </form>
+
+        <form name="words">  
+                <input name="noun" placeholder="noun"/>
+                <input name="adverb" placeholder="adverbe"/>
+                <input name="verb" placeholder="verb"/>
+            </form>  
+
+    </form>
+
+    <form name="words">  
+            <input name="noun" placeholder="noun"/>
+            <input name="adverb" placeholder="adverb"/>
+            <input name="verb" placeholder="verb"/>
+            <button>Submit</button>
+        </form>  
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

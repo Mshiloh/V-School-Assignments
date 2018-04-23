@@ -15,6 +15,11 @@
 }
 
 @font-face {
+  font-family: "ZonaPro Bold";
+  src: local("ZonaPro-Bold"), url("ZonaPro-Bold.otf");
+}
+
+@font-face {
   font-family: "Slim Joe";
   src: local("Slim Joe"), url("Slim Joe.otf");
 }
@@ -31,7 +36,7 @@ nav {
   grid-area: nav;
   position: fixed;
   float: top;
-  background-color: 	rgba(59, 59, 59, 0.863);
+  background-color: rgba(59, 59, 59, 0.863);
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -47,11 +52,14 @@ nav {
   width: 100vw;
 }
 
+a {
+  cursor: pointer;
+}
+
 header {
   grid-area: hdr;
   width: 100vw;
   background-image: url("https://i.imgur.com/FRtjuUF.jpg");
-  /* background-color: black; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,92 +135,243 @@ header {
 }
 
 @keyframes ani {
- 100% {
+  100% {
     transform: rotateY(360deg) rotateX(360deg);
   }
 }
 
-.about {
+.aboutContainer {
   grid-area: abt;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8AHqvKC1ZjclpsbX19S95GN689gknCaYwqU-MU-qynVD4yoy");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.projects {
+.aboutMeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "inf" "img";
+}
+
+.aboutInfoContainer {
+  color: white;
+  background-color: black;
+  grid-area: inf;
+}
+
+.portrait {
+  width: 50vw;
+  float: left;
+}
+
+.portraitContainer {
+  grid-area: img;
+  color: white;
+  background-color: black;
+}
+
+.projectsContainer {
   grid-area: prj;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8AHqvKC1ZjclpsbX19S95GN689gknCaYwqU-MU-qynVD4yoy");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.contact {
+.contactContainer {
   grid-area: con;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-areas: "cth cth" "ctb ctd" "mct mct";
   background-image: url("https://i.imgur.com/UYm1iis.jpg");
   background-size: cover;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-#contactBox {
+.myContactInfoContainer {
+  grid-area: mct;
+  color: rgb(187, 162, 138);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "ZonaPro ExtraLight";
+}
+
+.contactHeaderContainer {
+  grid-area: cth;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  
-}
-
-.contactHeadContiner {
+  justify-content: center;
+  align-items: center;
   background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
   background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  margin-top: 2vh;
 }
 
 .contactHeader {
+  font-family: "Slim Joe";
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.contactBox {
+  grid-area: ctb;
+  width: 60vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+}
+
+.contactHeadingContainer {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.contactHeading {
   font-family: "Slim Joe";
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.contactSubheadContainer {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding-bottom: 15px;
+}
+
+.contactSubhead {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "ZonaPro ExtraLight";
 }
 
 input,
 select,
 textarea {
   font-family: "ZonaPro ExtraLight";
-  width: 100%;
-  padding: 12px;
-  border: 1px inset solid rgb(163, 73, 73);
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  resize: vertical;
-}
-
-#message {
-  width: 100%;
+  margin: 5px;
+  padding: 5px;
 }
 
 .formInfo,
-.button {
+.submitMessage {
   color: rgb(187, 162, 138);
   font-family: "ZonaPro ExtraLight";
-  width: 80vw;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: 1vh;
+  padding-bottom: 5px;
 }
 
-button {
+.submitMessage {
+  cursor: pointer;
+}
+
+.contactDetails {
+  grid-area: ctd;
+  width: 30vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactDetailsHeaderContainer {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.contactDetailsHeader {
+  font-family: "ZonaPro ExtraLight";
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.contactDetailsSubheadContainer {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-top: 2vh;
+  padding-bottom: 15px;
+}
+
+.contactDetailsSubhead {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "ZonaPro ExtraLight";
+}
+
+.linkedinIcon {
+  width: 7vw;
+}
+
+.githubIcon {
+  width: 7vw;
+}
+
+.myContactInfoContainer {
+  padding: 20px;
+}
+
+.contactPhone,
+.contactEmail {
+  color: rgb(187, 162, 138);
+  font-family: "ZonaPro ExtraLight";
+  padding: 20px;
+}
+
+.submitMessage {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  color: black;
   width: 100%;
   color: rgb(187, 162, 138);
-  border: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(187, 162, 138);
+  ;
+  border-width: 5px;
+  border-style: outset;
   background: none;
-  margin-bottom: 2vh;
+  padding: 10px;
+  /* font-family: "Slim Joe"; */
+  font-family: "ZonaPro Bold";
+  font-weight: 900px;
+}
+
+.submitMessage:hover {
+  background-color: rgb(187, 162, 138);
+  color: black;
 }
 
 footer {
@@ -223,21 +382,24 @@ footer {
   left: 0;
   background-color: rgba(0, 0, 0, 0);
   padding: 1vh;
-  color: tomato;
 }
+
+/* ------------------------------------------------------------------------------ */
 
 /* Mobile */
 
 @media only screen and (max-width: 768px) {
   nav {
     height: 5vh;
+    background-color: rgba(54, 54, 54, 0.801);
   }
   .nav {
     font-size: 2.5vw;
     margin-left: -5vw;
   }
   header {
-    height: 45vh;
+    height: 50vw;
+    padding-top: 3.5vw;
   }
   .banner {
     margin-top: 4vh;
@@ -246,14 +408,9 @@ footer {
   .tagline {
     font-size: 5vw;
   }
-
   .cube {
     font-size: 2.3vw;
   }
-  /* .about {}
-
-  .projects {} */
-
   .contact {
     grid-area: con;
     display: flex;
@@ -261,9 +418,32 @@ footer {
     justify-content: center;
     height: 80vh;
   }
-  
+  .contactHeadingContainer {
+    font-size: 5vw;
+  }
   .contactHeader {
     font-size: 6vw;
+  }
+  .contactDetails {
+    grid-area: ctd;
+    width: 30vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+  }
+  .contactDetailsHeader,
+  .contactSubhead {
+    font-size: 3.3vw;
+  }
+  .contactPhone,
+  .contactEmail {
+    font-size: 3vw;
+  }
+  .contactPhoneSymbol {
+    font-size: 5vw;
+  }
+  .contactEmailSymbol {
+    font-size: 7.5vw;
   }
   input,
   select,
@@ -276,7 +456,7 @@ footer {
     width: 100%;
   }
   button {
-    font-size: 2vw;
+    font-size: 2.3vw;
   }
   footer {
     font-size: 2.5vw;

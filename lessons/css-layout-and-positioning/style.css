@@ -1,0 +1,51 @@
+/* Begin all CSS files with the following: */
+
+/* 10vh = 10% of the view height */
+
+/* static = default, positioned according to normal flow of page */
+
+/* relative = position relative to normal position */
+
+/* absolute = position relative to the parent */
+
+/* fixed = stays on viewport(screen/window) where you put them, no matter where you scroll 
+good for nav bars or menus because it stays in place*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.parent {
+    height: 300px;
+    width: 200px;
+    background-color: lightsalmon;
+    position: relative;
+}
+
+.child {
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    background-color: lightseagreen;
+    position: absolute;
+}
+
+.grandchild {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+.special {
+    background-color: red;
+    right: 0;
+}

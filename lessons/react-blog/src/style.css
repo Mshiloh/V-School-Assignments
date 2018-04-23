@@ -1,0 +1,17 @@
+/* * {
+    margin: 25px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  } */
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue
+}
+
+.yellow {
+  background-color: yellow;
+}

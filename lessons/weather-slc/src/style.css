@@ -1,0 +1,256 @@
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    border: 1px solid black;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Merriweather:300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+.app-wrapper {
+    display: grid;
+    grid-template-areas: "hdr" "con" "nav" "ftr"
+}
+
+header {
+    grid-area: hdr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    background-image: url("https://i.imgur.com/OcboUeq.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.headerText {
+    font-size: 9vw;
+    font-family: 'Bitter', serif;
+    color: rgb(226, 220, 213);
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    position: fixed absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(38, 35, 41);
+}
+
+.nav {
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(226, 220, 213);
+    font-size: 2.3vw;
+}
+
+.content-wrapper {
+    grid-area: con;
+}
+
+.currentWeatherContainer {
+    display: grid;
+    margin: 5vw;
+    grid-template-areas:
+    "dslc dslc dslc"
+    "dtim dtim dtim"
+    "dtmp dicn dhum"
+    "dtmp dicn dprc"
+    "dtmp dicn dwin"
+    "dsum dsum dsum";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dslc {
+    grid-area: dslc;
+}
+
+.dtim {
+    grid-area: dtim;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dtmp {
+    grid-area: dtmp;
+}
+
+.dicn {
+    grid-area: dicn;
+}
+
+.dhum {
+    grid-area: dhum;
+}
+
+.dprc {
+    grid-area: dprc;
+}
+
+.dwin {
+    grid-area: dwin;
+}
+
+.dsum {
+    grid-area: dsum;
+}
+
+.dslc, .dtim, .dsum, .dicn, .dtmp, .dprc, .dhum, .dwin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+
+.weatherItemHourlyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hourlyWeatherContainer {
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    grid-template-areas: "tim icn tmp hum prc win" "tim icn tmp hce pce wce" "bla sum tmp hce pce wce";
+    max-height: 20vh;
+}
+
+.timHr {
+    grid-area: tim;
+    border: 1px solid black;
+}
+
+.blaHr {
+    grid-area: bla;
+    border: 1px solid black;
+}
+
+.icnHr {
+    grid-area: icn;
+    border: 1px solid black;
+}
+
+.sumHr {
+    grid-area: sum;
+    font-size: 2.5vw;
+    font-size: 2.5vh;
+    border: 1px solid black;
+}
+
+.tmpHr {
+    grid-area: tmp;
+    font-size: 4.5vw;
+    font-size: 5.5vh;
+    border: 1px solid black;
+}
+
+.prcHr {
+    grid-area: prc;
+    border: 1px solid black;
+}
+
+.pceHr {
+    grid-area: pce;
+    border: 1px solid black;
+}
+
+.humHr {
+    grid-area: hum;
+    border: 1px solid black;
+}
+
+.hceHr {
+    grid-area: hce;
+    border: 1px solid black;
+}
+
+.winHr {
+    grid-area: win;
+    border: 1px solid black;
+}
+
+.wceHr {
+    grid-area: wce;
+    border: 1px solid black;
+}
+
+.tmpHr,
+.humHr,
+.hceHr,
+.prcHr,
+.pceHr,
+.winHr,
+.wceHr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.humHr,
+.prcHr,
+.winHr {
+    font-size: 2.5vw;
+}
+
+.hceHr, .pceHr, .wceHr {
+    font-size: 3vw;
+    font-size: 4.5vh;
+}
+
+.forecastByHourHeader {
+    font-size: 6vw;
+    font-family: 'Bitter', serif;
+    color: rgb(38, 35, 41);
+    margin-top: 10px;
+}
+
+.forecastContent {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 3vw;
+}
+
+.liveFeedHeader,
+.weeklyHeader {
+    margin: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bitter', serif;
+    font-size: 5vw;
+    color: rgb(38, 35, 41);
+}
+
+footer {
+    grid-area: ftr;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(38, 35, 41);
+}
+
+.footer {
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(226, 220, 213);
+    font-size: 2.3vw;
+    padding-left: 10px;
+}
