@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 25px;
+    height: 22vh;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+img {
+    height: 500px;
+    width: 500px;
+    transition-duration: 1.5s;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+img:active {
+    height: 200px;
+    width: 500px; 
+}
+
+footer {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

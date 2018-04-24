@@ -41,7 +41,7 @@ export const getHourly = () => {
             .catch(err => {
                 dispatch({
                     type: "ERR_MSG",
-                    errMsg: "Sorry, you're data is unavailable"
+                    errMsg: "Sorry, your data is unavailable"
                 });
             });
     }
