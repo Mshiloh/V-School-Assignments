@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const initialState = {
-    data: {
-    },
+    data: [],
     loading: true,
-    errMsg: ""
+    errMsg: "",
+    currentIndex: 0
 }
 
 const cardsReducer = (state = initialState, action) => {
@@ -26,16 +26,17 @@ const cardsReducer = (state = initialState, action) => {
     }
 }
 
-const flashdeck = "/cards"
+const flashdeck = "/cards/";
 
-export const getCards = () => {
+export const getCards = (deckId) => {
     return dispatch => {
-        axios.get(flashdeck)
+        axios.get(`${flashdeck}?deckId=${deckId}`)
             .then(response => {
                 dispatch({
                     type: "GET_CARDS",
-                    cards: response.data.cards
+                    cards: response.data
                 })
+                console.log(response.data);
             })
             .catch(err => {
                 dispatch({

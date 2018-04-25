@@ -1,19 +1,23 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import "./style.css";
 
-import MainDecks from "../Decks";
+import Decks from "../Decks";
 
 function Home(props) {
+        const deckStyles = {
+                ul: "homeUl",
+                li: "homeLi"
+        }
+        return (
+                <div>
+                        {/* Render a list of links to the game-deck page */}
+                                <Decks deckStyles={deckStyles} endpoint="study">
+                                </Decks>
 
-    return (
-            <div className="homeDeckList">
-                    <MainDecks> Home Decks
-                    </MainDecks>
-            </div>
-    )
+                        {/* <Route path="/study/:id" component={Study}></Route> */}
+                </div>
+        )
 }
 
 export default Home;

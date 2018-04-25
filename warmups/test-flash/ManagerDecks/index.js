@@ -2,18 +2,19 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 
-import { getDecks } from "../../redux/decks.js";
+import { getDecks } from "../../../redux/decks.js";
 
-import DeckItem from "./DeckItem.js";
+import ManagerDeckItem from "./ManagerDeckItem.js";
 
-class Decks extends Component {
+class ManagerDecks extends Component {
     componentDidMount() {
         this.props.getDecks();
 
     }
     render() {
-        const { data, loading, errMsg, endpoint } = this.props;
-        const myDecks = data.map((deck, i) => <DeckItem endpoint={endpoint}liStyles={this.props.deckStyles.li} key={deck + i} {...deck}></DeckItem>)
+        const { data, loading, errMsg } = this.props;
+        const myManagerDecks = data.map((deck, i) => <ManagerDeckItem key={deck + i} {...deck}></ManagerDeckItem>)
+        console.log(data.title);
         if (loading) {
             return (
                 <div>...Loading</div>
@@ -24,8 +25,8 @@ class Decks extends Component {
             )
         } else {
             return (
-                <ul className={this.props.deckStyles.ul}>
-                    {myDecks}
+                <ul>
+                    {myManagerDecks}
                 </ul>
             )
         }
@@ -36,4 +37,4 @@ const mapStateToProps = state => {
     return state.decks
 }
 
-export default connect(mapStateToProps, { getDecks })(Decks);
+export default connect(mapStateToProps, { getDecks })(ManagerDecks);

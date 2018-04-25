@@ -1,0 +1,3 @@
+function toggleQA(question, answer) {
+    
+}

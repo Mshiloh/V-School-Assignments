@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapperQA {
+    padding: 20px;
+}
+
+.containerQ {
+    background: rgb(105, 158, 219);
+    padding: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.answerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.answerInput {
+    width: 90%;
+}
+
+button:active {
+background-color: green;
+
+}

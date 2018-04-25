@@ -5,7 +5,7 @@ function Header(props) {
     return (
         <div>
             <header>
-                <h1 className="headerText">Header</h1>
+                <h1 className="headerText">FlashDeck</h1>
             </header>
             <nav>
                 <Link to="/" className="nav">Home</Link>

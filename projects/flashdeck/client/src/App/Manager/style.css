@@ -1,6 +1,55 @@
-.managerDeckWrapper{
-    color: maroon;
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext');
+
+.managerUl {
+    margin: 0;
+    padding: 0;
+}
+
+.managerUl .managerLi {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: rgb(196, 196, 196);
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     background-image: url("http://cdn.onlinewebfonts.com/svg/img_386644.png");
-    background-size: contain;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 3vh;
+    background-position: right;
+    background-position-x: 97%;
+}
+
+/* every other light/dark grey */
+.managerUl .managerLi:nth-child(odd) {
+    background: rgb(148, 148, 148);
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_386644.png");
+    background-repeat: no-repeat;
+    background-size: 3vh;
+    background-position: right;
+    background-position-x: 97%;
+}
+
+/* darker on hover */
+.managerUl .managerLi:hover {
+    background: rgb(70, 70, 70);
+    color: white;
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_386644.png");
+    background-repeat: no-repeat;
+    background-size: 3vh;
+    background-position: right;
+    background-position-x: 97%;
+}
+
+.edit {
+    text-decoration: none;
+    color: black;
 }
