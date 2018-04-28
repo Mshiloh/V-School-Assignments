@@ -9,13 +9,11 @@ function Home(props) {
                 ul: "homeUl",
                 li: "homeLi"
         }
-        return (
-                <div>
-                        {/* Render a list of links to the game-deck page */}
-                                <Decks deckStyles={deckStyles} endpoint="study">
-                                </Decks>
 
-                        {/* <Route path="/study/:id" component={Study}></Route> */}
+        return (
+                <div className="homeWrapper">
+                        <Decks deckStyles={deckStyles} endpoint="study">
+                        </Decks>
                 </div>
         )
 }

@@ -1,24 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
+export default class CardsItem extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showAnswer: false,
+        };
+        this.revealAnswer = this.revealAnswer.bind(this);
+    }
 
-function CardsItem(props) {
-    const { deckId } = props.deckId._id;
-    const { question, answer, _id, endpoint } = props;
+    revealAnswer() {
+        this.setState({
+            showAnswer: true,
+        });
+    }
 
-    return (
+    render() {
+        const { deckId } = this.props.deckId._id;
+        const { question, answer, _id, endpoint } = this.props;
+        return (
 
-        <div className="wrapperQA">
-            <div className="containerQ">
-                <p>{question}</p>
+            <div className="wrapperQA">
+                <div className="containerQ">
+                    <p>{question}</p>
+                </div>
+                <button onClick={this.revealAnswer} className="checkButt">Check</button>
+                {this.state.showAnswer ?
+                    <p className="correctAnswer">{answer}</p> : null
+                }
+                <form className="answerForm">
+                    <input className="answerInput" type="text" placeholder="Enter answer..." />
+                </form>
             </div>
-            <div className="containerA">
-                <p>{answer}</p>
-            </div>
-            <form className="answerForm">
-                <input className="answerInput" type="text" placeholder="Enter answer..." />
-            </form>
-            <button>Check</button>
-        </div>
-    )
+        )
+    }
 }
-export default CardsItem;

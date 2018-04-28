@@ -1,5 +1,16 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "hdr" "cnt" "ftr"
+}
+
+.studyWrapper {
+    height: 70%;
+    grid-area: cnt;
 }
 
 .wrapperQA {
@@ -24,7 +35,10 @@
     width: 90%;
 }
 
-button:active {
-background-color: green;
+.checkButt {
+    cursor: pointer;
+}
 
+.checkButt:active {
+background-color: green;
 }

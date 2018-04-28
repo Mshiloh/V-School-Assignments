@@ -140,21 +140,23 @@ header {
   }
 }
 
-.aboutContainer {
+/*
+ .aboutContainer {
   grid-area: abt;
 }
-
+*
 .aboutMeContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "inf" "img";
+  /* grid-template-columns: 1fr 1fr; */
+  /* grid-template-areas: "inf" "img"; */
 }
-
+*/ /*
 .aboutInfoContainer {
   color: white;
   background-color: black;
   grid-area: inf;
-}
+} 
+*/
 
 .portrait {
   width: 50vw;

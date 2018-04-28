@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "hdr" "cnt" "ftr"
+}
+
+.headerWrapper {
+    grid-area: hdr;
+    height: 20vh;
+}
+
+.newWrapper {
+    height: 75vh;
+    grid-area: cnt;
+}
+
+.footerWrapper {
+    grid-area: ftr;
+    height: 5vh;
+}

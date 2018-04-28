@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 
-nav {
-    display: flex;
-    justify-content: space-evenly;
+.managerLink,
+.homeLink {
+    text-decoration: none;
 }
 
-.nav {
-    text-decoration: none;    
+.homeLink {
+    margin-right: 30vw;
 }

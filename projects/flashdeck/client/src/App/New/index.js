@@ -4,7 +4,7 @@ import "./style.css";
 
 function New(props) {
     return (
-        <div>
+        <div className="newWrapper">
             New
         </div>
     )

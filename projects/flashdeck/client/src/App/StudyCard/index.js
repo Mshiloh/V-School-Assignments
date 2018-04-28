@@ -10,9 +10,37 @@ import { getCards } from "../../redux/cards.js";
 
 
 class StudyCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentIndex: 0
+        }
+        this.nextQuestion = this.nextQuestion.bind(this);
+        this.previousQuestion = this.previousQuestion.bind(this);
+    }
+
     componentDidMount() {
         this.props.getCards(this.props.match.params.deckId);
     }
+
+    nextQuestion() {
+        this.setState(prevState => ({
+            currentIndex: prevState.currentIndex + 1
+
+        }))
+    }
+
+    previousQuestion() {
+        if (this.state.currentIndex == 0)
+            return;
+
+        this.setState(prevState => ({
+            currentIndex: prevState.currentIndex - 1
+
+        }))
+    }
+
+
     render() {
 
         const { data, loading, errMsg, currentIndex } = this.props;
@@ -27,11 +55,13 @@ class StudyCard extends Component {
                 <div>{errMsg}</div>
             )
         } else {
-            // const currentCard = data[currentIndex];
-            // console.log(currentCard)
+            let { currentIndex } = this.state;
+
             return (
-                <div>
-                    {myCards[0]}
+                <div className="studyWrapper">
+                    {myCards[currentIndex]}
+                    <button className="backButt" onClick={this.previousQuestion} >Back</button>
+                    <button className="nextButt" onClick={this.nextQuestion} >Next</button>
                 </div>
             )
         }

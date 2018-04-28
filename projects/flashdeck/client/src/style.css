@@ -2,3 +2,38 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+body {
+    display: grid;
+    grid-template-areas: "hdr" "nav" "cnt" "ftr"
+}
+
+.headerWrapper {
+    grid-area: hdr;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerText {
+    padding: 5px;
+}
+
+.navWrapper {
+    grid-area: nav;
+    height: 4.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(0, 132, 255);
+}
+
+.footerWrapper {
+    grid-area: ftr;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
