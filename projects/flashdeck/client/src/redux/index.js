@@ -1,6 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-
 import decksReducer from "./decks.js";
 import cardsReducer from "./cards.js";
 

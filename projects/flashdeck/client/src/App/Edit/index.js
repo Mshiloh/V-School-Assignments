@@ -7,6 +7,9 @@ import "./style.css";
 import EditItem from "./EditItem";
 
 import { getCards } from "../../redux/cards.js";
+import { editDeck } from "../../redux/decks.js";
+
+import { onSubmit } from "../../redux/decks.js";
 
 class Edit extends Component {
     componentDidMount() {
@@ -14,7 +17,7 @@ class Edit extends Component {
     }
     render() {
         const { data, loading, errMsg } = this.props.cards;
-        
+
         const editCards = data.map((card, i) => <EditItem key={card + i} {...card}></EditItem>)
 
         if (loading) {
@@ -30,6 +33,10 @@ class Edit extends Component {
             <div className="editWrapper">
                 {/* RENDER DECK TITLE INPUT HERE */}
                 {editCards}
+                <div className="saveDiscardWrapper">
+                    <button className="discardButt" type="submit" /*onClick= saveChanges()*/>Discard</button>
+                    <button className="saveButt">Save</button>
+                </div>
             </div>
         )
     }

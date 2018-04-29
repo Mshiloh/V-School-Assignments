@@ -13,21 +13,19 @@ import Footer from "./Footer.js";
 function App(props) {
     return (
         <div className="app-wrapper">
-
             <Header></Header>
-
             <Nav></Nav>
-
             <Switch>
                 <Route exact path="/" component={Home}></Route>
                 <Route path="/manager" component={Manager}></Route>
                 <Route path="/study/:deckId" component={StudyCard}></Route>
+
+                {/* <Route exact path="/study/:deckId/:cardIndex" component={Study}></Route> */}
                 <Route path="/edit/:deckId" component={Edit}></Route>
                 {/* <Route path="/new/" component={New}></Route> */}
-            </Switch>
 
+            </Switch>
             <Footer></Footer>
-            
         </div>
     )
 }

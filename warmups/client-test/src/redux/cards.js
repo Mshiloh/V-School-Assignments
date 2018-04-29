@@ -46,24 +46,3 @@ export const getCards = (deckId) => {
             });
     }
 }
-
-// export const getCards = (deckId) => {
-//     return dispatch => {
-//         axios.put(`${flashdeck}?deckId=${deckId}`)
-//             .then(response => {
-//                 dispatch({
-//                     type: "EDIT_CARDS",
-//                     cards: response.data
-//                 })
-//                 console.log(response.data);
-//             })
-//             .catch(err => {
-//                 dispatch({
-//                     type: "ERR_MSG",
-//                     errMsg: "Sorry, your data is unavailable"
-//                 });
-//             });
-//     }
-// }
-
-export default cardsReducer;

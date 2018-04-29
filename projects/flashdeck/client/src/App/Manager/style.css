@@ -4,73 +4,84 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext');
+body {
+    display: grid;
+    grid-template-areas: "hdr" "cnt" "ftr"
+}
+
+.managerWrapper {
+    height: 75vh;
+    grid-area: cnt;
+    background: #E9D7CB;
+    height: 70vh;
+    grid-area: cnt;
+    padding: 20px;
+    list-style: none;
+}
+
+.newButt {
+    background: rgb(158, 82, 28);
+    /* background: #A76531; */
+    color: #E9D7CB;
+    font-size: 2.2vw;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.newButt:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-size: 2.5vw;
+}
+
 .managerUl {
     margin: 0;
     padding: 0;
 }
 
 .managerUl .managerLi {
+    list-style-type: none;
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: rgb(196, 196, 196);
+    background-image: url("https://i.imgur.com/QoUP4vb.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     font-size: 18px;
     transition: 0.2s;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-image: url("http://cdn.onlinewebfonts.com/svg/img_386644.png");
-    background-repeat: no-repeat;
-    background-size: 3vh;
-    background-position: right;
-    background-position-x: 97%;
+    border: 3px solid #E9D7CB;
 }
-
-/* every other light/dark grey */
 
 .managerUl .managerLi:nth-child(odd) {
-    background: rgb(148, 148, 148);
-    background-image: url("http://cdn.onlinewebfonts.com/svg/img_386644.png");
+    background-image: url("https://i.imgur.com/QoUP4vb.jpg");
     background-repeat: no-repeat;
-    background-size: 3vh;
-    background-position: right;
-    background-position-x: 97%;
+    background-position: center;
+    background-size: cover;
 }
 
-/* darker on hover */
-
 .managerUl .managerLi:hover {
-    background: rgb(70, 70, 70);
-    color: white;
-    background-image: url("http://cdn.onlinewebfonts.com/svg/img_386644.png");
+    background-image: url("https://i.imgur.com/gXojGr9.jpg");
     background-repeat: no-repeat;
-    background-size: 3vh;
-    background-position: right;
-    background-position-x: 97%;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.managerDeckTitles {
+    color: #E9D7CB;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3vh;
 }
 
 .edit {
     text-decoration: none;
     color: black;
-}
-
-body {
-    display: grid;
-    grid-template-areas: "hdr" "cnt" "ftr"
-}
-
-.headerWrapper {
-    grid-area: hdr;
-    height: 20vh;
-}
-
-.managerWrapper {
-    height: 75vh;
-    grid-area: cnt;
-}
-
-.footerWrapper {
-    grid-area: ftr;
-    height: 5vh;
 }

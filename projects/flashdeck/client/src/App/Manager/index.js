@@ -13,12 +13,12 @@ function Manager(props) {
     }
     return (
         <div className="managerWrapper">
-
+<div className="managerDeckTitles">
+            <Decks deckStyles={deckStyles} endpoint="edit"></Decks>
+</div>
             <Link to="/new" className="new">
                 <button className="newButt">Create New Deck</button>
             </Link>
-            
-                <Decks deckStyles={deckStyles} endpoint="edit"></Decks>
 
         </div>
     )

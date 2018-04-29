@@ -46,23 +46,4 @@ export const getDecks = () => {
     }
 }
 
-// export const addDeck = (event) => {
-//     return (dispatch) => {
-//         axios.post(flashdeck, props)
-//             .then(response => {
-//                 dispatch({
-//                     type: "ADD_DECK",
-//                     decks: response.data
-//                 })
-//                 console.log(response.data);
-//             })
-//             .catch(err => {
-//                 dispatch({
-//                     type: "ERR_MSG",
-//                     errMsg: "Sorry, your data is unavailable"
-//                 });
-//             });
-//     }
-// }
-
 export default decksReducer;

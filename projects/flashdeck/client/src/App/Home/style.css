@@ -1,9 +1,24 @@
 * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    margin: 0;    
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext');
+
+body {
+    display: grid;
+    grid-template-areas: "hdr" "cnt" "ftr";
+}
+
+.homeWrapper {
+    background: #E9D7CB;
+    height: 70vh;
+    grid-area: cnt;
+    padding: 20px;
+    list-style: none;
+}
+
 .homeUl {
     margin: 0;
     padding: 0;
@@ -14,56 +29,39 @@
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: rgb(196, 196, 196);
+    background-image: url("https://i.imgur.com/QoUP4vb.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     font-size: 18px;
     transition: 0.2s;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-image: url("https://image.flaticon.com/icons/svg/17/17437.svg");
-    background-repeat: no-repeat;
-    background-size: 3vh;
-    background-position: right;
-    background-position-x: 97%;
+    border: 3px solid #E9D7CB;    
 }
-
-/* every other light/dark grey */
 
 .homeUl .homeLi:nth-child(odd) {
-    background: rgb(148, 148, 148);
-    background-image: url("https://image.flaticon.com/icons/svg/17/17437.svg");
+    color: #E9D7CB;
+    background-image: url("https://i.imgur.com/QoUP4vb.jpg");
     background-repeat: no-repeat;
-    background-size: 3vh;
-    background-position: right;
-    background-position-x: 97%;
+    background-position: center;
+    background-size: cover;
 }
 
-/* darker on hover */
-
 .homeUl .homeLi:hover {
-    background: rgb(70, 70, 70);
-    color: white;
-    background-image: url("https://image.flaticon.com/icons/svg/17/17437.svg");
+    background-image: url("https://i.imgur.com/gXojGr9.jpg");
     background-repeat: no-repeat;
-    background-size: 3vh;
-    background-position: right;
-    background-position-x: 97%;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    
 }
 
 a {
+    color: #E9D7CB;
     text-decoration: none;
-    color: black;
-}
-
-body {
-    display: grid;
-    grid-template-areas: "hdr" "cnt" "ftr"
-}
-
-.homeWrapper {
-    height: 70vh;
-    grid-area: cnt;
-    padding: 20px;
-    list-style: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3vh;
 }
