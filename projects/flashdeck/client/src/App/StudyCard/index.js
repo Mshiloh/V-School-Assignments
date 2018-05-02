@@ -7,7 +7,9 @@ import "./style.css";
 import CardsItem from "./CardsItem";
 
 import { getCards } from "../../redux/cards.js";
+import { getDecks } from "../../redux/decks.js";
 
+import NewCard from "../Edit/NewCard";
 
 class StudyCard extends Component {
     constructor(props) {
@@ -23,15 +25,15 @@ class StudyCard extends Component {
         this.props.getCards(this.props.match.params.deckId);
     }
 
-    nextQuestion() {
-        this.setState(prevState => ({
-            currentIndex: prevState.currentIndex + 1
-
-        }))
+    nextQuestion(length) {
+        this.setState(prevState => {
+            console.log(prevState.currentIndex, length);
+            return { currentIndex: prevState.currentIndex + 1 < length ? prevState.currentIndex + 1 : 0 }
+        })
     }
 
     previousQuestion() {
-        if (this.state.currentIndex == 0)
+        if (this.state.currentIndex === 0)
             return;
 
         this.setState(prevState => ({
@@ -43,8 +45,8 @@ class StudyCard extends Component {
 
     render() {
 
-        const { data, loading, errMsg, currentIndex } = this.props;
-        const myCards = data.map((card, i) => <CardsItem key={card + i} {...card}></CardsItem>)
+        const { data, loading, errMsg } = this.props;
+        const myCards = data.filter(card => card.deckId._id === this.props.match.params.deckId).map((card, i) => <CardsItem key={card + i} {...card}></CardsItem>)
 
         if (loading) {
             return (
@@ -60,8 +62,10 @@ class StudyCard extends Component {
             return (
                 <div className="studyWrapper">
                     {myCards[currentIndex]}
-                    <button className="backButt" onClick={this.previousQuestion} >Back</button>
-                    <button className="nextButt" onClick={this.nextQuestion} >Next</button>
+                    <div className="nextBackWrapper">
+                        <button className="backButt" onClick={this.previousQuestion} >⇦</button>
+                        <button className="nextButt" onClick={() => this.nextQuestion(myCards.length)} >⇨</button>
+                    </div>
                 </div>
             )
         }

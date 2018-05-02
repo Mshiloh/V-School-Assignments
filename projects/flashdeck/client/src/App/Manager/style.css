@@ -10,29 +10,39 @@ body {
 }
 
 .managerWrapper {
-    height: 75vh;
     grid-area: cnt;
-    background: #E9D7CB;
-    height: 70vh;
+    background: #FFF8E1;
+    height: 100vh;
     grid-area: cnt;
-    padding: 20px;
     list-style: none;
+    width: 100vw;
 }
 
 .newButt {
-    background: rgb(158, 82, 28);
-    /* background: #A76531; */
-    color: #E9D7CB;
-    font-size: 2.2vw;
-    margin-top: 20px;
+    background-image: url("https://i.imgur.com/RlCkjA8.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #FFF8E1;
     border-radius: 5px;
-    font-weight: 600;
+}
+
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .newButt:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
-    font-size: 2.5vw;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-weight: 700;
+    background-image: url("https://i.imgur.com/TcxZWO1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .managerUl {
@@ -44,18 +54,16 @@ body {
     list-style-type: none;
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 12px 40px;
     background-image: url("https://i.imgur.com/QoUP4vb.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-size: 18px;
     transition: 0.2s;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 3px solid #E9D7CB;
+    border: 3px solid #FFF8E1;
 }
 
 .managerUl .managerLi:nth-child(odd) {
@@ -71,17 +79,144 @@ body {
     background-position: center;
     background-size: cover;
     padding: 10px;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .managerDeckTitles {
-    color: #E9D7CB;
+    color: #FFF8E1;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-    font-size: 3vh;
 }
 
 .edit {
     text-decoration: none;
     color: black;
+}
+
+/* Small Mobile*/
+
+@media only screen and (max-width: 600px) {
+    .managerWrapper {
+        padding: 6vw;
+    }
+    .managerUl .managerLi {
+        padding: 2vw 3vw 2vw 6vw;
+    }
+    .managerUl .managerLi:hover {
+        padding: 10px;
+    }
+    a {
+        font-size: 4.5vw;
+    }
+    .newButt {
+        font-size: 3vw;
+        margin-top: 2vw;
+    }
+}
+
+/* Large Mobile / Portrait Tablet */
+
+@media only screen and (min-width: 600px) {
+    .managerWrapper {
+        padding: 7vw;
+    }
+    .managerUl .managerLi {
+        padding: 1vw 2vw 1vw 6vw;
+    }
+    .managerUl .managerLi:hover {
+        padding: 10px;
+    }
+    a {
+        font-size: 4vw;
+    }
+    .newButt {
+        font-size: 3vw;
+        margin-top: 2vw;
+    }
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) {
+    .managerWrapper {
+        padding: 5vw;
+    }
+    .managerUl .managerLi {
+        padding: 1vw 2vw 1vw 6vw;
+    }
+    .managerUl .managerLi:hover {
+        padding: 10px;
+    }
+    a {
+        font-size: 2.9vw;
+    }
+    .newButt {
+        font-size: 2.5vw;
+        margin-top: 1.5vw;
+    }
+}
+
+/* Laptop/Desktop */
+
+@media only screen and (min-width: 992px) {
+    .managerWrapper {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    .managerUl .managerLi {
+        padding: .8vw 1.8vw .8vw 4.5vw;
+    }
+    .managerUl .managerLi:hover {
+        padding: 10px;
+    }
+    a {
+        font-size: 2.5vw;
+    }
+    .newButt {
+        font-size: 2.5vw;
+        margin-top: 1.5vw;
+    }
+}
+
+/* Large Desktop */
+
+@media only screen and (min-width: 1200px) {
+    .managerWrapper {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+    .managerUl .managerLi {
+        padding: .5vw 1.5vw .5vw 3vw;
+    }
+    .managerUl .managerLi:hover {
+        padding: 10px;
+    }
+    a {
+        font-size: 2vw;
+    }
+    .newButt {
+        font-size: 2vw;
+        margin-top: 1.8vw;
+    }
+}
+
+/* Extra Large Desktop */
+
+@media only screen and (min-width: 1500px) {
+    .managerWrapper {
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+    .managerUl .managerLi {
+        padding: .5vw 1.5vw .5vw 2.5vw;
+    }
+    .managerUl .managerLi:hover {
+        padding: 10px;
+    }
+    a {
+        font-size: 1.6vw;
+    }
+    .newButt {
+        font-size: 1.8vw;
+        margin-top: 1.2vw;
+    }
 }

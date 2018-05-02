@@ -1,43 +1,66 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
+import { editCard } from "../../redux/cards.js";
+import { removeCard } from "../../redux/cards.js";
 
-import { editDeck } from "../../redux/decks.js";
-
-export default class EditItem extends Component {
+class EditItem extends Component {
     constructor(props) {
         super(props);
-        this.setState = {
-            title: this.props.title,
-            question: this.props.question,
-            answer: this.props.answer
+        const { id } = props;
+        console.log(props);
+        const { data } = props.cards;
+        const currCard = data.find(card => card._id === id)
+        this.state = {
+            inputs: {
+                question: this.props.question,
+                answer: this.props.answer
+            }
         }
-        // this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
-    /*
     handleChange(event) {
-        event.preventDefault;
-
+        const { value, name } = event.target;
+        this.setState(prevState => {
+            return {
+                inputs: {
+                    ...prevState.inputs,
+                    [name]: value
+                }
+            }
+        })
     }
-    */
+    handleSubmit(event) {
+        event.preventDefault();
+        this.props.editCard(this.props._id, this.state.inputs);
+    }
+
+    handleDelete(event) {
+        event.preventDefault();
+        this.props.removeCard(this.props._id);
+        // alert("Card deleted.")
+    }
+
     render() {
-        const { title } = this.props.deckId;
-        // const onSubmit = this.props;
-        const { question, answer, _id, endpoint } = this.props;
+        const { question, answer, _id, endpoint } = this.state.inputs;
         return (
-            <form className="editForm" /*handleChange={(e) => handleChange}*/>
-                <div className="edittTitleWrapper">
-                    <input className="editDeckTitle" type="text" value={title} />
-                    <button className="deleteButt">⌫</button>
-                </div>
-                <div className="editQuestionWrapper">
-                    <input className="editQuestion" type="text" value={question} />
-                    <button className="deleteButt">⌫</button>
-                </div>
-                <div className="editAnswerWrapper">
-                    <input className="editAnswer" type="text" value={answer} />
-                    <button className="deleteButt">⌫</button>
-                </div>
+            <form onSubmit={this.handleSubmit} className="editForm">
+
+                <input onChange={this.handleChange} className="editQuestion" type="text" value={question} name="question" />
+
+                <input onChange={this.handleChange} className="editAnswer" type="text" value={answer} name="answer" />
+
+                  <button className="saveButt">Save</button>
+                    <button className="deleteButt" onClick={this.handleDelete}>Delete</button>
             </form>
         )
     }
 }
+
+const mapStateToProps = state => {
+    return state
+}
+
+export default connect(mapStateToProps, { editCard, removeCard })(EditItem);

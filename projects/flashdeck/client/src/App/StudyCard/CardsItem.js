@@ -23,10 +23,13 @@ export default class CardsItem extends Component {
                 <div className="containerQ">
                     <p>{question}</p>
                 </div>
-                <button onClick={this.revealAnswer} className="checkButt">Check</button>
+
                 {this.state.showAnswer ?
-                    <p className="correctAnswer">{answer}</p> : null
+                    <p className="correctAnswer">【 {answer} 】</p> : null
                 }
+                <div className="checkWrapper">
+                    <button onClick={this.revealAnswer} className="checkButt">Check</button>
+                </div>
                 <form className="answerForm">
                     <input className="answerInput" type="text" placeholder="Enter answer..." />
                 </form>

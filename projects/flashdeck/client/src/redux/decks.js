@@ -14,6 +14,34 @@ const decksReducer = (state = initialState, action) => {
                 data: action.decks,
                 loading: false
             }
+
+        case "NEW_DECK":
+            return {
+                data: [...state.data, action.deck]
+            }
+
+        case "EDIT_TITLE":
+            return {
+                ...state,
+                data: state.data.map(deck => {
+                    if (deck._id === action.id) {
+                        console.log(action.updatedDeck)
+                    } else {
+                        return deck
+                    }
+                })
+            }
+
+        case "REMOVE_DECK":
+            return {
+                data: state.data.filter((deck, id) => id !== action.id).map(deck => {
+                    if (deck._id === action.id) {
+                        return action.deletedDeck
+                    } else {
+                        return deck
+                    }
+                })
+            }
         case "ERR_MSG":
             return {
                 ...state,
@@ -25,7 +53,7 @@ const decksReducer = (state = initialState, action) => {
     }
 }
 
-const flashdeck = "/decks"
+const flashdeck = "/decks/"
 
 export const getDecks = () => {
     return dispatch => {
@@ -35,34 +63,67 @@ export const getDecks = () => {
                     type: "GET_DECKS",
                     decks: response.data
                 })
-                console.log(response.data);
             })
             .catch(err => {
                 dispatch({
                     type: "ERR_MSG",
-                    errMsg: "Sorry, your data is unavailable"
+                    errMsg: "Sorry, your data is unavailable."
                 });
             });
     }
 }
 
-// export const addDeck = (event) => {
-//     return (dispatch) => {
-//         axios.post(flashdeck, props)
-//             .then(response => {
-//                 dispatch({
-//                     type: "ADD_DECK",
-//                     decks: response.data
-//                 })
-//                 console.log(response.data);
-//             })
-//             .catch(err => {
-//                 dispatch({
-//                     type: "ERR_MSG",
-//                     errMsg: "Sorry, your data is unavailable"
-//                 });
-//             });
-//     }
-// }
+export const newDeck = (deck) => {
+    return dispatch => {
+        axios.post(flashdeck, { ...deck })
+            .then(response => {
+                dispatch({
+                    type: "NEW_DECK",
+                    deck: response.data
+                })
+            })
+    }
+}
+
+export const editTitle = (id, updatedDeck) => {
+    return dispatch => {
+        axios.put(flashdeck + id, updatedDeck)
+            .then(response => {
+                dispatch({
+                    type: "EDIT_TITLE",
+                    id: id,
+                    updatedDeck: response.data
+                })
+            })
+            .catch(err => {
+                dispatch({
+                    type: "ERR_MSG",
+                    errMsg: "Sorry, your data is unavailable."
+                });
+            })
+    }
+}
+
+
+
+export const removeDeck = id => {
+    return dispatch => {
+        axios.delete(flashdeck + id)
+            .then(response => {
+                dispatch({
+                    type: "REMOVE_DECK",
+                    id: id,
+                    removedDeck: response.data
+
+                })
+            })
+            .catch(err => {
+                dispatch({
+                    type: "ERR_MSG",
+                    errMsg: "Deck deleted."
+                });
+            })
+    }
+}
 
 export default decksReducer;

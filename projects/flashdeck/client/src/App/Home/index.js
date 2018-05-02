@@ -12,6 +12,8 @@ function Home(props) {
 
         return (
                 <div className="homeWrapper">
+                        <p className="homeHeader">Click on a deck title to study the flashcards</p>
+                        <br/>
                         <Decks deckStyles={deckStyles} endpoint="study">
                         </Decks>
                 </div>

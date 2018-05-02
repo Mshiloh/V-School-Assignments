@@ -52,13 +52,11 @@ deckRouter.route("/:id")
     })
     //PUT one
     .put((req, res) => {
-        DeckModel.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-            .populate("deckId")
-            .exec((err, updatedDeck) => {
-                if (err) return res.send(err);
-                if (!updatedDeck) return res.status(404).send({ message: "deck not found" });
-                res.status(200).send(updatedDeck);
-            })
+        DeckModel.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, updatedDeck) => {
+            if (err) return res.send(err);
+            if (!updatedDeck) return res.status(404).send({ message: "deck not found" });
+            res.status(200).send(updatedDeck);
+        })
     })
 
 module.exports = deckRouter;
