@@ -5,11 +5,6 @@
 }
 
 @font-face {
-  font-family: "BIG JOHN";
-  src: local("BIG JOHN"), url("BIG JOHN.otf");
-}
-
-@font-face {
   font-family: "ZonaPro ExtraLight";
   src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
 }
@@ -31,6 +26,7 @@ nav {
   position: fixed;
   float: top;
   background-color: rgba(59, 59, 59, 0.863);
+  height: 5vh;
   width: 100vw;
 }
 
@@ -45,13 +41,14 @@ a {
   align-items: center;
   font-family: "ZonaPro ExtraLight";
   color: #C4B19E;
+  font-size: 2.5vw;
+  margin-left: -5vw;
   width: 100vw;
 }
 
-
-
 .header {
   height: 100vh;
+  padding-top: 3.5vw;
 }
 
 header {
@@ -75,13 +72,16 @@ header {
 
 .banner {
   grid-area: bnr;
-  font-family: "Slim Joe";
   text-align: center;
+  font-family: "Slim Joe";
+  margin-top: 4vh;
+  font-size: 11vw;
 }
 
 .tagline {
   grid-area: tag;
   font-family: "ZonaPro ExtraLight";
+  font-size: 5vw;
 }
 
 [class*="cube"] {
@@ -95,6 +95,7 @@ header {
 .cube {
   transform-style: preserve-3d;
   animation: ani 10s infinite linear;
+  font-size: 2.3vw;
 }
 
 .cube__face {
@@ -134,22 +135,16 @@ header {
 .about {
   grid-area: abt;
   display: grid;
-  grid-template-areas: "inf img";
+  grid-template-areas: "inf" "img";
   background-size: cover;
-  background-repeat: no-repeat;  
-  padding: 30px;
-  width: 100vw;
+  background-repeat: no-repeat;
+  padding: 20px;
 }
 
-.aboutHeader {
-  text-align: center;
-  font-family: "Slim Joe";
-  font-size: 5vw;
-  
-}
-
-.left {
+.top {
   grid-area: inf;
+  display: flex;
+  justify-content: center;
 }
 
 .skillsContainer {
@@ -157,7 +152,6 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   align-content: center;
-  width: 100%;
 }
 
 .skillsList {
@@ -168,29 +162,38 @@ header {
 
 .mernText {
   font-family: "ZonaPro ExtraLight";
-  font-size: 5vw;
+  margin-bottom: 15px;
+  font-size: 3.5vw;
 }
 
 .skills {
-  width: 12vw;
-  height: 12vw;
   padding: 10px;
+  margin-bottom: 15px;
+  width: 8vw;
+  height: 8vw;
 }
 
-
-
-.right {
+.bottom {
   grid-area: img;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .portrait {
-  width: 40vw;
-  height: 40vw;
+  padding: 10px;
+  margin-left: 30px;
+  height: 45vw;
+  width: 45vw;
+}
+
+.blurb {
+  font-family: "Slim Joe";
+  text-align: right;
+  margin-right: 30px;
   padding: 20px;
+  font-size: 5vw;
 }
 
 .projectsContainer {
@@ -212,29 +215,12 @@ header {
   width: 100vw;
 }
 
-.myContactInfoContainer {
-  grid-area: mct;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  justify-content: space-evenly;
-  font-family: "ZonaPro ExtraLight";
-  color: rgb(187, 162, 138);
-  width: 100%;
-}
-
 .contactHeaderContainer {
   grid-area: cth;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
   background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  width: 100vw;
 }
 
 .contactHeader {
@@ -243,8 +229,28 @@ header {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 20px;
-  font-family: "Slim Joe";  
+  padding-top: 20px;
+  font-family: "Slim Joe";
+  font-size: 6vw;
+}
+
+.contactSubheadContainer {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-top: 2vh;
+}
+
+.contactSubhead {
+  font-family: "ZonaPro ExtraLight";
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 3.3vw;
 }
 
 .contactBox {
@@ -255,22 +261,6 @@ header {
   width: 60vw;
 }
 
-.contactHeadingContainer, .contactSubheadContainer {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.contactHeading {
-  font-family: "Slim Joe";
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-
 input,
 select,
 textarea {
@@ -278,114 +268,63 @@ textarea {
   margin: 5px;
   padding: 5px;
   width: 100%;
+  font-size: 2vw;
 }
 
-.formInfo,
-.submitMessage {
+#message {
+  height: 15vh;
+  width: 100%;
+}
+
+.formInfo {
   color: rgb(187, 162, 138);
   font-family: "ZonaPro ExtraLight";
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 2.5vw;
+  font-weight: 900;
 }
 
 .submitMessage {
+  margin-bottom: 30px;
+  margin-top: 10px;
   cursor: pointer;
-}
-
-.contactDetails {
-  grid-area: ctd;
-  width: 30vw;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 25px;
-  display: flex;
-  flex-direction: column;
+  background: black;
+  color: #C4B19E;
+  border: 2.5px solid #C4B19E;
+  background-image: linear-gradient(to right, #C4B19E 50%, black 50%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.contactDetailsHeaderContainer {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.contactDetailsHeader {
   font-family: "ZonaPro ExtraLight";
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 10px;
-}
-
-.contactDetailsSubheadContainer {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  margin-top: 2vh;
-  padding-bottom: 15px;
-}
-
-.contactDetailsSubhead {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-family: "ZonaPro ExtraLight";
-}
-
-.socialMediaIcons {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.github,
-.linkedin {
-  width: 10vw;
-  height: 100%;
-}
-
-.myContactInfoContainer {
-  padding: 20px;
-}
-
-.contactPhone,
-.contactEmail {
-  color: rgb(187, 162, 138);
-  font-family: "ZonaPro ExtraLight";
-  padding: 20px;
-}
-
-.submitMessage {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   margin-left: 5px;
-  color: black;
-  width: 100%;
-  color: rgb(187, 162, 138);
-  border: 1px solid rgb(187, 162, 138);
-  border-width: 5px;
-  border-style: outset;
-  background: none;
   padding: 10px;
-  font-family: "ZonaPro Bold";
-  font-weight: 900px;
+  width: 35%;
 }
 
 .submitMessage:hover {
-  background-color: rgb(187, 162, 138);
   color: black;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background-position: bottom left;
 }
 
 .footerContainer {
@@ -401,86 +340,35 @@ textarea {
 }
 
 footer {
-  font-family: "ZonaPro ExtraLight";  
+  font-family: "ZonaPro ExtraLight";
   color: #C4B19E;
+  font-size: 2.5vw;
 }
 
-/* ------------------------------------------------------------------------------ */
-
-/* Mobile */
-
-@media only screen and (max-width: 768px) {
-  nav {
-    height: 5vh;
-    background-color: rgba(54, 54, 54, 0.801);
-  }
-  .nav {
-    font-size: 2.5vw;
-    margin-left: -5vw;
-  }
-  header {
-    height: 50vw;
-    padding-top: 3.5vw;
-  }
-  .banner {
-    margin-top: 4vh;
-    font-size: 11vw;
-  }
-  .tagline {
-    font-size: 5vw;
-  }
-  .cube {
-    font-size: 2.3vw;
-  }
-  .contact {
-    grid-area: con;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-  }
-  .contactHeadingContainer {
-    font-size: 5vw;
-  }
-  .contactHeader {
-    font-size: 6vw;
-  }
-  .contactDetails {
-    grid-area: ctd;
-    width: 30vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 25px;
-  }
-  .contactDetailsHeader,
-  .contactSubhead {
-    font-size: 3.3vw;
-  }
-  .contactPhone,
-  .contactEmail {
-    font-size: 3vw;
-  }
-  .contactPhoneSymbol {
-    font-size: 5vw;
-  }
-  .contactEmailSymbol {
-    font-size: 7.5vw;
-  }
-  input,
-  select,
-  textarea {
-    font-size: 2vw;
-    width: 100%;
-  }
-  #message {
-    height: 15vh;
-    width: 100%;
-  }
-  button {
-    font-size: 2.3vw;
-  }
-  footer {
-    font-size: 2.5vw;
-  }
+.footerText {
+  text-align: center;
 }
 
+.socialMediaContainer{
+  display: flex;
+}
+
+.socialMediaIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.github,
+.linkedin {
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 15vw;
+  width: 15vw;
+}
+
+/* .github:hover,
+.linkedin:hover {
+} */

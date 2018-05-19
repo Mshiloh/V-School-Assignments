@@ -7,18 +7,38 @@ body {
     height: 100vh;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 header {
+    display: flex;
+    flex: .7;    
     text-align: center;
     padding-bottom: 50px;
     padding-top: 25px;
     height: 22vh;
+    border: 1px solid black;
+}
+
+h3 {
+    display: flex;
+    flex: .3;   
+    font-style: italic;
+    border: 1px solid black;
 }
 
 section {
     display: flex;
+    flex: 3;
     justify-content: center;
     align-items: center;
     height: 70vh;
+    border: 1px solid black;
 }
 
 img {
@@ -39,6 +59,8 @@ img:active {
 footer {
     height: 5vh;
     display: flex;
+    flex: .3;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }

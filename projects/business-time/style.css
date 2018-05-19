@@ -1,7 +1,6 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid black; */
 }
 
 @font-face {
@@ -11,16 +10,13 @@
 
 .wrapper {
     display: flex;
-    margin-right: 15px;
+    width: 100vw;
 }
 
-.col {
-    flex: 1;
-}
 
 .thirds {
     display: flex;
-    padding-top: 15px;
+    padding-top: 2vw;
 }
 
 .thirds .col {
@@ -30,84 +26,172 @@
 header {
     display: flex;
     height: 500px;
-}
-
-h1 {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    font-family: "Elianto Regular";
-    color: white;
-    font-size: 6em;
-    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
     background-image: url("https://static1.squarespace.com/static/54342d2ee4b05084251a8c09/5434dd56e4b0a01cde536ea4/5a970ddbec212d77e45d4e0a/1519848942987/Site_Header2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-nav {
-    background-color: black;
-    font-family: "Elianto Regular";
+h1 {
+    display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Elianto Regular";
+    color: white;
+    font-size: 5.5em;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    font-family: "Elianto Regular";
     height: 50px;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 a {
+    text-decoration: none;
     color: white;
 }
 
-main {
+.about {
     display: flex;
-    height: 300px;
     font-family: 'Montserrat', sans-serif;
-    padding: 50px;
 }
 
-.main {
+.summary {
     text-indent: 50px;
-    line-height: 45px;
-    font-size: 25px;
+    line-height: 40px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .galleryPeek {
     display: flex;
     flex-direction: row;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.homeGallery {
     padding: 10px;
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    text-align: center;
-    margin-right: 20px;
+    height: 100%;
+    width: 31vw;
 }
 
-.gallery {
-    display: flex;
-    flex-direction: row;
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    text-align: center;
-    margin-right: 20px;
+.homeContact {
+    display: inline;
+    margin: 50px;
 }
-
 .contact {
     display: flex;
-    height: 400px;
-    padding: 50px;
+    padding: 20px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     line-height: 35px;
     font-size: 25px;
     margin-bottom: 50px;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.address {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .map {
     display: flex;
     align-items: center;
-    height: 330px;
+    width: 50vw;
+    justify-content: center;
+}
+
+.meet {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: "Elianto Regular";
+    font-size: 40px;
+}
+
+.names {
+    text-align: center;
+    margin-bottom: 45px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 900px;
+}
+
+.employeeImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 25vw;
+}
+
+.galleryContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    margin: 20px;
+}
+
+.galleryImage {
+    align-self: left;
+    height: 100%;
+    width: 10em;
+    padding: 5px;
+}
+
+.contactPage {
+    width: 100%;
+    background-image: url("https://pre00.deviantart.net/480f/th/pre/f/2009/309/7/6/black_white_gradient_by_halaxega.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contactHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    font-family: "Elianto Regular";
+    color: white;
+    font-size: 8vw;
+}
+
+#contactBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 section {
@@ -124,67 +208,12 @@ section {
     text-align: center;
 }
 
-img {
-    height: 275px;
-    width: auto;
-    float: left;
-    padding: 10px;
-}
-
-.names {
-    display: flex;
-    font-size: 25px;
-    font-weight: 900px;
-    margin-bottom: 45px;
-    font-family: "Montserrat", sans-serif;
-}
-
-
-footer {
-    display: flex;
-    font-family: "Montserrat", sans-serif;
-    background-color: black;
-    align-items: center;
-    color: white;
-    height: 50px;
-    font-size: 14px;
-}
-
-.socialMedia {
-    height: 50px;;
-    width: 120px;;
-    
-}
-
-#contactBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: 1px solid black;
-    margin: 50px;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.contactHeader {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    font-size: 35px;
-    background-image: url("https://templates.utah.edu/_main-v2/_images/header/background/grey.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 125px;
-}
-
 input,
 select,
 textarea {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;    
+    font-size: 15px;
     width: 100%;
-    padding: 12px;
+    padding: 8px;
     border: 1px solid lightgray;
     box-sizing: border-box;
     margin-top: 6px;
@@ -197,79 +226,151 @@ textarea {
     width: 100%;
 }
 
-.container {
-    padding: 30px;
-}
-
-.formInfo, .button {
+.formInfo,
+.contactInfo {
     font-family: 'Montserrat', sans-serif;
 }
 
-button {
-    width:  100%;
-    background-image: url("https://templates.utah.edu/_main-v2/_images/header/background/grey.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-size: 20px;
-    height: 40px;
+input,
+textarea {
+    outline: 3px solid dimgray;
+    outline-style: inset;
 }
 
-/* Mobile */
+input::placeholder,
+textarea::placeholder {
+    color: rgb(94, 94, 94);
+}
 
-@media (min-width: 0px) {
-    .wrapper {
-        display: block;
-        flex-wrap: wrap;
-    }
-    nav {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+.submitContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit {
+    background-image: url("https://i.imgur.com/JqAjHwc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border: 5px solid dimgray;
+    border-style: inset;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    font-family: "Elianto Regular";
+    font-family: "Elianto Regular";
+    color: white;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+    font-size: 38px;
+    width: 55%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    padding: 4px;
+    padding-left: 20px;
+    font-size: 1em;
+}
+
+.socialMedia {
+    cursor: pointer;
+    padding: 10px;
+    height: 55px;
+    width: 55px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 4.3em;
     }
     a {
         font-size: 1em;
+    }
+    .galleryPeek {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        align-content: flex-start;
+        flex-flow: row wrap;
+        margin: 20px;
+    }
+    
+    .homeGallery {
+        align-self: left;
+        height: 100%;
+        width: 21em;
+        padding: 5px;
+    }
+
+    .employeeImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    width: 25vw;        
     }
 }
 
 /* Tablet */
 
-@media (min-width: 700px) {
+@media (min-width: 726px) {
     .wrapper {
         display: block;
         flex-wrap: wrap;
     }
-    nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    header {
+        display: flex;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
     }
-    a {
-        width: 50%;
+    .homeContact {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .map {
+        width: 30vw;
     }
 }
+
 
 /* Laptop */
 
 @media (min-width: 900px) {
+    .wrapper {
+        display: block;
+        flex-wrap: wrap;
+    }
     header {
         display: flex;
-    }
-    nav {
-        display: flex;
+        align-content: center;
         text-align: center;
-        justify-content: space-evenly;
+        justify-content: center;
     }
-    a {
-        width: auto;
-    }
-    main {
-        display: flex;
-    }
-    section {
-        display: flex;
-    }
-    footer {
-        display: flex;
+
+    .map {
+        width: 20vw;
     }
 }

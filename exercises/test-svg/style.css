@@ -1,0 +1,6 @@
+.shapeContainer {
+    background-image: url("!stripes.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

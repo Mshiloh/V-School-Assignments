@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-
+    <link rel="stylesheet" type="text/css" media="screen" href="button.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.less" />
 </head>
 
 <body>
@@ -49,35 +50,34 @@
         </div>
 
         <!-- ABOUT -->
-        <div>
-            <h1 class="aboutHeader">ABOUT</h1>
-        </div>
         <div class="about">
-            <div class="left">
+
+            <div class="top">
                 <div class="skillsContainer">
+
                     <div class="skillsList">
                         <img class="skills" src="https://i.imgur.com/cgVFXbr.png" alt="mongodb">
                         <p class="mernText">MongoDB</p>
-                    </div>
-                    <div class="skillsList">
+
                         <img class="skills" src="https://i.imgur.com/iqdO3B5.png" alt="express">
                         <p class="mernText">Express</p>
-                    </div>
-                    <div class="skillsList">
+
                         <img class="skills" src="https://i.imgur.com/a8jZAsw.png" alt="react">
                         <p class="mernText">React</p>
-                    </div>
-                    <div class="skillsList">
+
                         <img class="skills" src="https://i.imgur.com/of47Nu8.png" alt="node">
                         <p class="mernText">Node</p>
                     </div>
+
                 </div>
             </div>
-            <div class="right">
+
+            <div class="bottom">
                 <img class="portrait" src="https://i.imgur.com/EvYqLWP.png" alt="Portrait">
-                <p>Hello, my name is Morgan. I'm a full-stack developer based in Salt Lake City, UT. I specialize in the MERN
-                    stack
-                </p>
+                <p class="blurb">Full-stack developer
+                    <br/>
+                    <br/>Salt Lake City, UT</p>
+
             </div>
         </div>
 
@@ -88,6 +88,7 @@
 
         <!-- CONTACT -->
         <div class="contactContainer">
+
             <div class="contactHeaderContainer">
                 <h1 class="contactHeader">CONTACT</h1>
             </div>
@@ -95,8 +96,8 @@
             <!-- CONTACT BOX -->
             <div class="contactBox">
                 <form id="contactForm">
-                    <div class="contactDetailsHeaderContainer">
-                        <h1 class="contactDetailsHeader">send a message</h1>
+                    <div class="contactSubheadContainer">
+                        <h1 class="contactSubhead">send a message</h1>
                     </div>
                     <label for="first">
                         <p class="formInfo"></p>
@@ -110,36 +111,35 @@
                         <p class="formInfo"></p>
                     </label>
                     <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
-                    <button onclick="" type="submit" class="submitMessage" value="Send Email">Submit</button>
+                    <div class="buttonContainer">
+                        <button onclick="" type="submit" class="submitMessage" value="Send Email">Submit </button>
+                    </div>
+
                 </form>
             </div>
 
             <!-- SOCIAL MEDIA -->
-            <div class="contactContainer">
-                <div class="contactDetails">
-                    <div class="contactDetailsHeaderContainer">
-                        <h1 class="contactDetailsHeader">get social</h1>
-                    </div>
-                    <div class="contactDetailsSubheadContainer">
-                        <h2 class="contactDetailsSubhead"></h2>
-                    </div>
-                    <div class="socialMediaIcons">
-                        <a href="http://https://github.com/mshiloh"></a>
+            <div class="socialMediaContainer">
+                <div class="socialMediaIcons">
+                    <a href="https://github.com/mshiloh">
                         <img class="github" src="http://www.toca-ch.com/data/walls/315/35434622.png" alt="github">
-                        <a href="http://https://www.linkedin.com/in/morgan-shiloh-ellis/">
-                            <img class="linkedin" src="https://www.iconsdb.com/icons/preview/white/linkedin-5-xxl.png" alt="linkedin">
-                        </a>
-                    </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/morgan-shiloh-ellis/">
+                        <img class="linkedin" src="https://www.iconsdb.com/icons/preview/white/linkedin-5-xxl.png" alt="linkedin">
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- FOOTER -->
-        <div class="footerContainer">
-            <footer>
-                &copy; Morgan Ellis 2018
-            </footer>
-        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footerContainer">
+        <footer>
+            &copy; Morgan Ellis 2018
+        </footer>
+    </div>
     </div>
 
     <script src="script.js"></script>
