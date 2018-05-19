@@ -1,0 +1,110 @@
+/* start small (phone size) */
+
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid black;
+}
+
+@import url("http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic");
+*/
+/* columns defined as 1fr by default, row height is not */
+
+.container {
+    display: grid;
+    height: 300vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr .75fr 1fr 1fr .2fr .3fr;
+    grid-template-areas: "hdr" "nav" "abt" "prt" "req" "inf" "ftr" "art" "men";
+}
+
+body {
+    font-family: "Libre Baskerville", sans-serif;
+}
+
+header {
+    grid-area: hdr;
+    height: 230px;
+    padding: 20px 0 70px 0;
+    background-image: url("http://www.csszengarden.com/214/contours.png"), url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/gridlines.png"), url("http://www.csszengarden.com/214/huntington.jpg");
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    text-align: center;
+    position: relative;
+}
+
+.h1Header {
+    display: inline-block;
+    font-family: "Julius Sans One", sans-serif;
+    color: white;
+    vertical-align: middle;
+    font-size: 35px;
+    width: 100%;
+    text-i
+    
+}
+
+.swirl {
+    display: inline-block;
+    align-items: center;
+    vertical-align: middle;
+    height: 80px;
+}
+
+.h4Header {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    text-indent: 85px;
+    width: 100%;    
+}
+
+nav {
+    grid-area: nav;
+    font-family: "Julius Sans One", sans-serif;
+    line-height: 45px;
+    padding: 12px 0 0 0;
+    color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.233);
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.about {
+    grid-area: abt;
+}
+
+.participation {
+    grid-area: prt;
+}
+
+.requirements {
+    grid-area: req;
+}
+
+.info {
+    grid-area: inf;
+}
+
+footer {
+    grid-area: ftr;
+}
+
+.artists {
+    grid-area: art;
+}
+
+.menu {
+    grid-area: men;
+}
+
+@media only screen and (min-width: 1132px) {
+    .container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr 1fr .8fr;
+        grid-template-areas: "hdr nav" "abt men" "prt men" "req ." "inf inf" "ftr ftr"/*blank area is a perio*/
+    }
+}
