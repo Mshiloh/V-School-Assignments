@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
   margin: 0;
+  /* font-weight: 900; */
 }
 
 @font-face {
@@ -19,12 +20,15 @@
   src: local("Slim Joe"), url("Slim Joe.otf");
 }
 
+/* ----------- NAV ----------- */
+
 nav {
   grid-area: nav;
   display: flex;
   flex-direction: row;
   position: fixed;
   float: top;
+  z-index: 1;
   background-color: rgba(59, 59, 59, 0.863);
   height: 5vh;
   width: 100vw;
@@ -45,6 +49,8 @@ a {
   margin-left: -5vw;
   width: 100vw;
 }
+
+/* ----------- HEADER ----------- */
 
 .header {
   height: 100vh;
@@ -83,6 +89,8 @@ header {
   font-family: "ZonaPro ExtraLight";
   font-size: 5vw;
 }
+
+/* ----------- CUBE ----------- */
 
 [class*="cube"] {
   position: absolute;
@@ -132,243 +140,167 @@ header {
   }
 }
 
-.about {
-  grid-area: abt;
-  display: grid;
-  grid-template-areas: "inf" "img";
+/* ----------- GLOBAL ----------- */
+
+.contentWrapper {
+  
+  background-image: url("https://i.imgur.com/AOQD1Ab.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 20px;
 }
 
-.top {
-  grid-area: inf;
-  display: flex;
-  justify-content: center;
-}
-
-.skillsContainer {
+.sectionHeaderContainer {
+  grid-area: cth;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-content: center;
-}
-
-.skillsList {
-  display: flex;
-  flex-direction: row;
+  text-align: center;
   align-items: center;
-}
-
-.mernText {
-  font-family: "ZonaPro ExtraLight";
-  margin-bottom: 15px;
-  font-size: 3.5vw;
-}
-
-.skills {
-  padding: 10px;
-  margin-bottom: 15px;
-  width: 8vw;
-  height: 8vw;
-}
-
-.bottom {
-  grid-area: img;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.portrait {
-  padding: 10px;
-  margin-left: 30px;
-  height: 45vw;
-  width: 45vw;
-}
-
-.blurb {
-  font-family: "Slim Joe";
-  text-align: right;
-  margin-right: 30px;
-  padding: 20px;
-  font-size: 5vw;
-}
-
-.projectsContainer {
-  grid-area: prj;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8AHqvKC1ZjclpsbX19S95GN689gknCaYwqU-MU-qynVD4yoy");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.contactContainer {
-  grid-area: con;
-  display: grid;
-  grid-template-areas: "cth cth" "ctb ctd";
-  background-image: url("https://i.imgur.com/UYm1iis.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100vw;
-}
-
-.contactHeaderContainer {
-  grid-area: cth;
+  justify-content: center;
   background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
   background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
-
-.contactHeader {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding-top: 20px;
-  font-family: "Slim Joe";
-  font-size: 6vw;
-}
-
-.contactSubheadContainer {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  margin-top: 2vh;
-}
-
-.contactSubhead {
-  font-family: "ZonaPro ExtraLight";
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 10px;
-  font-size: 3.3vw;
-}
-
-.contactBox {
-  grid-area: ctb;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 25px;
-  width: 60vw;
-}
-
-input,
-select,
-textarea {
-  font-family: "ZonaPro ExtraLight";
-  margin: 5px;
-  padding: 5px;
-  width: 100%;
-  font-size: 2vw;
-}
-
-#message {
-  height: 15vh;
-  width: 100%;
-}
-
-.formInfo {
-  color: rgb(187, 162, 138);
-  font-family: "ZonaPro ExtraLight";
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 8px;
-}
-
-.buttonContainer {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-button {
-  font-size: 2.5vw;
+  margin-bottom: 20px;
   font-weight: 900;
 }
 
-.submitMessage {
-  margin-bottom: 30px;
-  margin-top: 10px;
-  cursor: pointer;
-  background: black;
-  color: #C4B19E;
-  border: 2.5px solid #C4B19E;
-  background-image: linear-gradient(to right, #C4B19E 50%, black 50%);
-  background-size: 200% 100%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+.sectionHeader {
+  display: flex;
   text-align: center;
-  font-family: "ZonaPro ExtraLight";
-  margin-left: 5px;
-  padding: 10px;
-  width: 35%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 5px;
+  font-family: "Slim Joe";
+  font-size: 7vw;
+  width: 80vw;
 }
 
-.submitMessage:hover {
-  color: black;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  background-position: bottom left;
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(196, 177, 158, 0.432), #C4B19E, rgba(196, 177, 158, 0.432));
+  margin-bottom: 10px;
+  width: 80vw;
 }
+
+.topHr {
+  margin-top: 8vh;
+}
+
+.bottomHr {
+  margin-bottom: 5vh;
+  
+}
+
+/* ----------- FOOTER ----------- */
 
 .footerContainer {
   grid-area: ftr;
   display: flex;
-  text-align: center;
+  flex-direction: column;
   align-items: center;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(59, 59, 59, 0.863);
+  background-color: black;
   padding: 1vh;
 }
 
 footer {
-  font-family: "ZonaPro ExtraLight";
-  color: #C4B19E;
-  font-size: 2.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Slim Joe";
+  color: white;
+  font-size: 5vw;
+}
+
+.footerTextContainer {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-right: 10px;
 }
 
 .footerText {
-  text-align: center;
-}
-
-.socialMediaContainer{
-  display: flex;
-}
-
-.socialMediaIcons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  font-family: "ZonaPro ExtraLight";
 }
 
 .github,
 .linkedin {
-  cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 15vw;
-  width: 15vw;
+  margin-left: 10px;
+  height: 4.5vh;
+  width: auto;
 }
 
-/* .github:hover,
+.github:hover,
 .linkedin:hover {
-} */
+  margin-left: 10px;
+  height: 5vh;
+  width: auto;
+}
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .sectionHeader {
+    font-size: 5vw;
+  }
+}
+
+ /* Small Devices, Tablets */
+ @media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1050px) {
+  nav {
+ height: 5vw;
+  }
+  .sectionHeader {
+    font-size: 4vw;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  nav {
+    height: 4vw;
+  }
+  .nav {
+    font-size: 1.8vw;
+
+  }
+  .sectionHeader {
+    font-size: 3.5vw;
+  }
+  footer {
+  font-size: 2.1vw;
+  padding: 5px;
+  }
+}
+
+/* Extra-Large Devices & Wide Screens */
+
+@media only screen and (min-width: 1500px) {
+  nav {
+    height: 4vw;
+  }
+  .nav {
+    font-size: 1.8vw;
+
+  }
+  .sectionHeader {
+    font-size: 3.5vw;
+  }
+  footer {
+  font-size: 2vw;
+  }
+}

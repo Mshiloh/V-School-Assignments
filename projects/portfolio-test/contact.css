@@ -1,0 +1,179 @@
+.contactWrapper {
+    padding: 20px;
+    font-weight: 900;
+    width: 100%;
+}
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.contactDetailsWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.contactDetailsClipWrap {
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.phoneText, .emailText {
+  font-family: "ZonaPro ExtraLight";    
+  font-size: 5.5vw;
+    
+}
+
+.emailText:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 6vw;
+}
+
+.contactImg {
+    margin-right: 4vw;
+    height: 100%;
+    width: 8vw;
+}
+
+/*
+.contactSubheadContainer,
+.projectSubheadContainer {
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.contactSubhead,
+.projectSubhead {
+    font-family: "ZonaPro ExtraLight";
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 4vw;
+}
+
+.contactBox {
+    grid-area: ctb;
+    padding-bottom: 20px;
+    width: 80vw;
+}
+
+input,
+select,
+textarea {
+    font-family: "ZonaPro ExtraLight";
+    margin: 5px;
+    padding: 4px;
+    width: 100%;
+    font-size: 2.5vw;
+}
+
+#message {
+    height: 15vh;
+    width: 100%;
+}
+
+.formInfo {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    color: rgb(187, 162, 138);
+    font-family: "ZonaPro ExtraLight";
+}
+
+.buttonContainer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    font-size: 2.5vw;
+    font-weight: 900;
+}
+
+.submitMessage {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: black;
+    color: #C4B19E;
+    border: 2.5px solid #C4B19E;
+    background-image: linear-gradient(to right, #C4B19E 50%, black 50%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    text-align: center;
+    font-family: "ZonaPro ExtraLight";
+    margin-left: 8px;
+ 
+    margin-bottom: 8px;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 35%;
+}*/
+
+/* .submitMessage:hover {
+    color: black;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    background-position: bottom left;
+} */
+
+/* @media only screen and (min-width: 900px) {
+    .contactSubhead {
+        font-size: 3.2vw;
+    }
+    .formInfo {
+        padding: 8px;
+    }
+    input,
+    select,
+    textarea {
+        font-size: 2.2vw;
+    }
+    #message {
+        height: 25vh;
+    }
+    .submitMessage {
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+} */
+
+/* @media only screen and (min-width: 1500px) {
+    .contactSubhead {
+        font-size: 3vw;
+    }
+    .formInfo {
+        padding: 8px;
+    }
+    input,
+    select,
+    textarea {
+        font-size: 1.7vw;
+    }
+    #message {
+        height: 28vh;
+    }
+    .submitMessage {
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+}  */

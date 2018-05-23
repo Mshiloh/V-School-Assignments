@@ -11,135 +11,235 @@
     <title>Morgan Ellis</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="button.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="style.less" />
+    <link rel="stylesheet" type="text/css" media="screen" href="responsive.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="about.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="projects.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="contact.css" />
+
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <div class="headerContainer">
+    <a name="home"></a>
 
-            <!-- NAV -->
-            <nav>
-                <a class="nav" href="">Home</a>
-                <a class="nav" href="">About</a>
-                <a class="nav" href="">Projects</a>
-                <a class="nav" href="">Contact</a>
-            </nav>
+    <div class="headerContainer">
 
-            <!-- HEADER -->
-            <header class="header">
-                <div class="clip">
-                    <h1 class="banner">MORGAN ELLIS</h1>
-                </div>
-                <div id="cube" class="cube">
-                    <div class="cube__face"></div>
-                    <div class="cube__face"></div>
-                    <div class="cube__face"></div>
-                    <div class="cube__face"></div>
-                    <div class="cube__face"></div>
-                    <div class="cube__face"></div>
-                </div>
-                <div class="clip">
-                    <h2 class="tagline">Clean. Concise. Creative.</h2>
-                </div>
-            </header>
-        </div>
+        <!-- ================= NAV ================= -->
+        <nav>
+            <a class="nav" href="#home">Home</a>
+            <a class="nav" href="#about">About</a>
+            <a class="nav" href="#projects">Projects</a>
+            <a class="nav" href="#contact">Contact</a>
+        </nav>
 
-        <!-- ABOUT -->
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+            <div class="clip">
+                <h1 class="banner">MORGAN ELLIS</h1>
+            </div>
+            <div id="cube" class="cube">
+                <div class="cube__face"></div>
+                <div class="cube__face"></div>
+                <div class="cube__face"></div>
+                <div class="cube__face"></div>
+                <div class="cube__face"></div>
+                <div class="cube__face"></div>
+            </div>
+            <div class="clip">
+                <h2 class="tagline">Clean. Concise. Creative.</h2>
+            </div>
+        </header>
+    </div>
+
+    <div class="contentWrapper">
+
+        <!-- ================= ABOUT ================= -->
+
+        <a name="about"></a>
+        <div class="link"></div>
+
         <div class="about">
+            <div class="sectionHeaderContainer">
+                <hr class="">
 
-            <div class="top">
-                <div class="skillsContainer">
+                <h1 class="sectionHeader">ABOUT ME</h1>
+                <hr class="bottomHr">
+            </div>
 
-                    <div class="skillsList">
-                        <img class="skills" src="https://i.imgur.com/cgVFXbr.png" alt="mongodb">
-                        <p class="mernText">MongoDB</p>
+            <div class="aboutContent">
 
-                        <img class="skills" src="https://i.imgur.com/iqdO3B5.png" alt="express">
-                        <p class="mernText">Express</p>
-
-                        <img class="skills" src="https://i.imgur.com/a8jZAsw.png" alt="react">
-                        <p class="mernText">React</p>
-
-                        <img class="skills" src="https://i.imgur.com/of47Nu8.png" alt="node">
-                        <p class="mernText">Node</p>
-                    </div>
-
+                <div class="imgContainer">
+                    <img class="portrait" src="https://i.imgur.com/EvYqLWP.png" alt="Portrait">
                 </div>
-            </div>
+                <div class="divide"></div>
 
-            <div class="bottom">
-                <img class="portrait" src="https://i.imgur.com/EvYqLWP.png" alt="Portrait">
-                <p class="blurb">Full-stack developer
-                    <br/>
-                    <br/>Salt Lake City, UT</p>
+                <div class="skillsWrapper">
+                    <div class="skillsContainer">
 
-            </div>
-        </div>
+                        <div class="skillsList">
+                            <div class="skillItem">
+                                <img class="skills" src="https://i.imgur.com/eFQDZwH.png" alt="mongodb">
+                                <p class="mernText">MongoDB</p>
+                            </div>
 
-        <!-- PROJECTS -->
-        <div class="projectsContainer">
-            <div class="projects">Projects</div>
-        </div>
+                            <div class="skillItem">
+                                <img class="skills" src="https://i.imgur.com/qulOyYa.png" alt="express">
+                                <p class="mernText">Express</p>
+                            </div>
 
-        <!-- CONTACT -->
-        <div class="contactContainer">
+                            <div class="skillItem">
+                                <img class="skills" src="https://i.imgur.com/sE9ZiRn.png" alt="react">
+                                <p class="mernText">React</p>
+                            </div>
 
-            <div class="contactHeaderContainer">
-                <h1 class="contactHeader">CONTACT</h1>
-            </div>
+                            <div class="skillItem">
+                                <img class="skills" src="https://i.imgur.com/d1NPmJE.png" alt="node">
+                                <p class="mernText">Node</p>
+                            </div>
+                        </div>
 
-            <!-- CONTACT BOX -->
-            <div class="contactBox">
-                <form id="contactForm">
-                    <div class="contactSubheadContainer">
-                        <h1 class="contactSubhead">send a message</h1>
                     </div>
-                    <label for="first">
-                        <p class="formInfo"></p>
-                    </label>
-                    <input type="text" id="first" name="first" placeholder="Name">
-                    <label for="email">
-                        <p class="formInfo"></p>
-                    </label>
-                    <input type="text" id="email" name="email" placeholder="Email">
-                    <label for="messageText">
-                        <p class="formInfo"></p>
-                    </label>
-                    <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
-                    <div class="buttonContainer">
-                        <button onclick="" type="submit" class="submitMessage" value="Send Email">Submit </button>
-                    </div>
-
-                </form>
-            </div>
-
-            <!-- SOCIAL MEDIA -->
-            <div class="socialMediaContainer">
-                <div class="socialMediaIcons">
-                    <a href="https://github.com/mshiloh">
-                        <img class="github" src="http://www.toca-ch.com/data/walls/315/35434622.png" alt="github">
-                    </a>
-                    <a href="https://www.linkedin.com/in/morgan-shiloh-ellis/">
-                        <img class="linkedin" src="https://www.iconsdb.com/icons/preview/white/linkedin-5-xxl.png" alt="linkedin">
-                    </a>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- ================= PROJECTS ================= -->
+
+        <div class="projectsWrapper">
+
+            <div class="sectionHeaderContainer">
+                <hr class="topHr">
+
+                <h1 class="sectionHeader">PROJECTS</h1>
+                <hr class="bottomHr">
+            </div>
+
+            <div class="projectsContainer">
+                <a name="projects"></a>
+                <div class="projectImageContainer">
+
+                    <div class="weather projectSubheadContainer">
+                        <p class="projectSubhead">SLC Weather</p>
+                    </div>
+                    <img class="projectImage" src="https://i.imgur.com/HWsVmoI.jpg" alt="weather-app">
+                </div>
+
+                <div class="flashdeck projectImageContainer">
+                    <div class="projectSubheadContainer">
+                        <p class="projectSubhead">flashDeck</p>
+                    </div>
+                    <img class="projectImage" src="https://i.imgur.com/gxU1bGQ.jpg" alt="flashdeck">
+                </div>
+
+                <div class="set projectImageContainer">
+                    <div class="projectSubheadContainer">
+                        <p class="projectSubhead">SET Online</p>
+                    </div>
+                    <img class="projectImage" src="https://i.imgur.com/KmUg6Jf.jpg" alt="set">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= CONTACT ================= -->
+
+        <!-- <a name="contact"></a>
+        <div class="link"></div>
+
+        <div class="contactWrapper">
+
+            <div class="contactContainer">
+                <div class="sectionHeaderContainer">
+                    <hr class="topHr">
+
+                    <h1 class="sectionHeader">CONTACT</h1>
+                    <hr class="bottomHr">
+
+
+                </div> -->
+        <!-- ================= CONTACT BOX ================= -->
+        <!-- <div class="contactBox"> -->
+        <!-- <form action="mailto:mshiloh.code@gmail.com" id="contactForm">
+                        <div class="contactSubheadContainer">
+                            <h1 class="contactSubhead">get in touch</h1>
+                        </div>
+                        <label for="first">
+                            <p class="formInfo"></p>
+                        </label>
+                        <input type="text" id="first" name="first" placeholder="Name">
+                        <label for="email">
+                            <p class="formInfo"></p>
+                        </label>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                        <label for="messageText">
+                            <p class="formInfo"></p>
+                        </label>
+                        <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+                        <div class="buttonContainer">
+                            <button onclick="" type="submit" class="submitMessage" value="Send Email">Submit </button>
+                        </div>
+                    </form> -->
+        <a name="contact"></a>
+        <div class="link"></div>
+
+        <div class="contactWrapper">
+
+            <div class="contactContainer">
+                <div class="sectionHeaderContainer">
+                    <hr class="topHr">
+
+                    <h1 class="sectionHeader">CONTACT</h1>
+                    <hr class="bottomHr">
+
+
+                </div>
+                <div class="contactDetailsWrapper">
+                    <img class="contactImg" src="https://i.imgur.com/HuzbLLE.png" alt="phone">
+                    <div class="contactDetailsClipWrap">
+                        <p class="phoneText">(801) 500-5983</p>
+                    </div>
+                </div>
+
+                <div class="contactDetailsWrapper">
+                    <img class="contactImg" src="https://i.imgur.com/8rBAgRn.png" alt="email">
+                    <div class="contactDetailsClipWrap">
+                        <a class="emailText" href="mailto:moshiloh.ellis@gmail.com">moshiloh.ellis@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================= SOCIAL MEDIA ================= -->
+        <div class="socialMediaContainer">
+
+
+        </div>
 
     </div>
 
-    <!-- FOOTER -->
+    </div>
+    </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
     <div class="footerContainer">
         <footer>
-            &copy; Morgan Ellis 2018
+            <div class="footerTextContainer">
+                <p class="footerText">Morgan Ellis &copy;2018</p>
+            </div>
+            <div class="socialMediaIcons">
+                <a href="https://github.com/mshiloh">
+                    <img class="github" src="https://i.imgur.com/Pj3pP3Z.png" alt="github">
+                </a>
+                <a href="https://www.linkedin.com/in/morgan-shiloh-ellis/">
+                    <img class="linkedin" src="https://i.imgur.com/sDxXnJx.png" alt="linkedin">
+                </a>
+            </div>
+
         </footer>
-    </div>
     </div>
 
     <script src="script.js"></script>

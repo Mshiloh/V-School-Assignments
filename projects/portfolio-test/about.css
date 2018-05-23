@@ -1,0 +1,129 @@
+.about {
+    grid-area: abt;
+  }
+  
+  .aboutContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-top: 25px;
+  }
+  
+  .skillsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  
+  .skillsList {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  .skillItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .mernText {
+    font-family: "ZonaPro ExtraLight";
+    font-size: 3.5vw;
+  }
+  
+  .skills {
+    padding: 8px;
+    height: 100%;
+    width: 11vw;
+  }
+
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-right: 5vw;   
+  }
+  
+  .portrait {
+    height: auto;
+    width: 40vw;
+  }
+
+
+  /* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .skills {
+      width: 8vw;
+    }
+
+    .portrait {
+      height: auto;
+      width: 35vw;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .skills {
+    width: 7vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .portrait {
+    height: auto;
+    width: 28vw;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1050px) {
+  .skills {
+    width: 7vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .portrait {
+    height: auto;
+    width: 25vw;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .skills {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 5vw;
+  }
+
+  .portrait {
+    height: auto;
+    width: 28vw;
+  }
+}
+
+/* Extra-Large Devices & Wide Screens */
+
+@media only screen and (min-width: 1500px) {
+  .skills {
+    width: 5vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .mernText {
+    font-size: 3vw;
+  }
+
+  .portrait {
+    height: auto;
+    width: 20vw;
+  }
+}
