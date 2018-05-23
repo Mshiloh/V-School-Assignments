@@ -3,29 +3,32 @@
     font-weight: 900;
     width: 100%;
 }
+
 .contactContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
-.contactDetailsWrapper{
+
+.contactDetailsWrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-bottom: 50px;
 }
+
 .contactDetailsClipWrap {
     background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/0xPgM5l/elegant-background-wedding-loop-animation_x1ej4ywvi__F0000.png");
-  background-position: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
-.phoneText, .emailText {
-  font-family: "ZonaPro ExtraLight";    
-  font-size: 5.5vw;
-    
+.phoneText,
+.emailText {
+    font-family: "ZonaPro ExtraLight";
+    font-size: 5.5vw;
 }
 
 .emailText:hover {
@@ -177,3 +180,67 @@ button {
         margin-top: 30px;
     }
 }  */
+
+@media only screen and (min-width: 550px) {
+    .phoneText,
+    .emailText {
+        font-size: 5vw;
+    }
+    .emailText:hover {
+        font-size: 6vw;
+    }
+    .contactImg {
+        width: 8vw;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .phoneText,
+    .emailText {
+        font-size: 5vw;
+    }
+    .emailText:hover {
+        font-size: 6vw;
+    }
+    .contactImg {
+        width: 8vw;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .phoneText,
+    .emailText {
+        font-size: 4vw;
+    }
+    .emailText:hover {
+        font-size: 5vw;
+    }
+    .contactImg {
+        width: 8vw;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .phoneText,
+    .emailText {
+        font-size: 3.3vw;
+    }
+    .emailText:hover {
+        font-size: 4.3vw;
+    }
+    .contactImg {
+        width: 8vw;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .phoneText,
+    .emailText {
+        font-size: 3vw;
+    }
+    .emailText:hover {
+        font-size: 4vw;
+    }
+    .contactImg {
+        width: 8vw;
+    }
+}
