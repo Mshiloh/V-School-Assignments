@@ -1,110 +1,289 @@
 /* start small (phone size) */
 
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+@font-face {
+    font-family: "icomoon";
+    src: local("/Users/morgan/dev/assignments/projects/zen-garden/verdemoderna.ttf"), url("/Users/morgan/dev/assignments/projects/zen-garden/verdemoderna.ttf");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 @import url("http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic");
-*/
-/* columns defined as 1fr by default, row height is not */
-
-.container {
-    display: grid;
-    height: 300vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr .75fr 1fr 1fr .2fr .3fr;
-    grid-template-areas: "hdr" "nav" "abt" "prt" "req" "inf" "ftr" "art" "men";
-}
-
 body {
     font-family: "Libre Baskerville", sans-serif;
+    color: #325050;
+    background: #fff;
+    font-size: 70%;
+}
+
+.conatiner {
+    position: relative;
+    width: 100vw;
 }
 
 header {
-    grid-area: hdr;
-    height: 230px;
     padding: 20px 0 70px 0;
+    background: #2d6360 50% 0 url(huntington.jpg) no-repeat;
+    background-attachment: fixed, fixed, fixed, scroll;
+    border-top: solid 10px rgba(19, 67, 71, 0.9);
     background-image: url("http://www.csszengarden.com/214/contours.png"), url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/gridlines.png"), url("http://www.csszengarden.com/214/huntington.jpg");
     background-position: 0 0, 0 0, -5px -25px, 0 50%;
     background-repeat: repeat, repeat, repeat, no-repeat;
     background-size: auto, auto, auto, cover;
     text-align: center;
-    position: relative;
+    height: 250px;
 }
 
-.h1Header {
-    display: inline-block;
-    font-family: "Julius Sans One", sans-serif;
-    color: white;
-    vertical-align: middle;
-    font-size: 35px;
-    width: 100%;
-    text-i
-    
+h1,
+h2 {
+    padding: 0 10%;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+h1 {
+    padding-top: 0;
+    padding-bottom: 5px;
+    border-bottom: none;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2.5em;
+}
+
+h2 {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    border-top: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.6em;
+    font-style: italic;
 }
 
 .swirl {
     display: inline-block;
     align-items: center;
     vertical-align: middle;
-    height: 80px;
+    margin-bottom: 5px;
+    height: auto;
+    width: 50px;
 }
 
-.h4Header {
+.subtitle {
     font-style: italic;
     color: rgba(255, 255, 255, 0.6);
     text-indent: 85px;
-    width: 100%;    
-}
-
-nav {
-    grid-area: nav;
-    font-family: "Julius Sans One", sans-serif;
-    line-height: 45px;
-    padding: 12px 0 0 0;
-    color: rgba(255, 255, 255, 0.65);
-    background-color: rgba(255, 255, 255, 0.233);
-    height: 75px;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
-.about {
-    grid-area: abt;
+.viewAllContainer {
+    font-family: "Julius Sans One", sans-serif;
+    color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.233);
+    z-index: 2;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
 }
 
-.participation {
-    grid-area: prt;
+.viewAll {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    bottom: 0;
 }
 
-.requirements {
-    grid-area: req;
+.arrow {
+    font-family: "verdemoderna";
+    font-size: 90px;
+    padding: 0;
+    margin: 0;
+    width: 50px;
 }
 
-.info {
-    grid-area: inf;
+.sectionHeader {
+    margin: auto;
+    margin-top: 2em;
+    color: #2e484c;
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 1.8em;
+    width: 80%;
+}
+
+p {
+    margin: auto;
+    margin-top: .75em;
+    margin-bottom: .75em;
+    font-size: 1.2em;
+    line-height: 2;
+    width: 80%;
+}
+
+.participation,
+.benefits {
+    background-attachment: scroll, scroll, fixed;
+    background-color: rgba(138, 188, 159, 0.5);
+    background-image: url(contours-opaque.png), url(gridlines-opaque.png), url("http://www.csszengarden.com/214/bamboo.png");
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+a {
+    color: #0d8ba1;
+    text-decoration: none;
+}
+
+.bookRef {
+    width: auto;
+    padding: 1em 12%;
+    padding-top: 1em;
+    padding-right: 12%;
+    padding-bottom: 1em;
+    padding-left: 12%;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.4);
+    background: #3e5d67;
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url("http://www.csszengarden.com/214/contours.png"), url("http://www.csszengarden.com/214/gridlines.png"), url("http://www.csszengarden.com/214/noise.png"), url("http://www.csszengarden.com/214/koi.jpg");
+    background-position: 0 0, -5px -25px, 0 0, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    font-size: 1.8em;
+    font-style: italic;
+    text-align: center;
+}
+
+.bookRef p {
+    display: inline;
+    line-height: 2;
+}
+
+.whiteReg {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: normal;
 }
 
 footer {
-    grid-area: ftr;
+    clear: both;
+    padding: 3em 10%;
+    color: #fff;
+    background: #134347;
+    text-align: center;
+    font-family: "verdemoderna";
 }
 
-.artists {
-    grid-area: art;
+.icons {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.4);
+    top: 3px;
+    left: 0;
+    overflow: visible;
+    font-size: 36px;
+    text-indent: 0;
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-family: "icomoon";
+    padding: 10px;
 }
 
-.menu {
-    grid-area: men;
+.sidebar {
+    display: block;
+    list-style: none;
+    overflow: hidden;
+    background-attachment: scroll, scroll, fixed;
+    background-color: rgba(138, 188, 159, 0.5);
+    background-image: url(contours-opaque.png), url(gridlines-opaque.png), url("http://www.csszengarden.com/214/bamboo.png");
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
 }
 
-@media only screen and (min-width: 1132px) {
-    .container {
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: .2fr 1fr 1fr 1fr 1fr .8fr;
-        grid-template-areas: "hdr nav" "abt men" "prt men" "req ." "inf inf" "ftr ftr"/*blank area is a perio*/
-    }
+.designList {
+    background: #edf4f0;
+    width: 100vw;
+    padding: 0;
+}
+
+.design-selection h3 {
+    display: none;
+}
+
+.sidebar h3 {
+    display: none;
+}
+
+.resourcesList {
+    padding: 0;
+}
+
+h3 {
+    margin: 2em 0 0 0;
+    color: #2e484c;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+.designItem li:nth-child(2n+1),
+.zen li:nth-child(2n+1) {
+    clear: left;
+}
+
+.designItem ul,
+.zen ul {
+    margin: 0;
+    color: #616857;
+}
+
+.designItem,
+.creator {
+    color: #616857;
+}
+
+.creator {
+    font-style: normal;
+}
+
+.designList {
+    width: 100%;
+}
+
+.designItem li,
+.zen li {
+    float: left;
+    width: 50%;
+    padding: 1.5em 5%;
+    border-top: solid 1px #d9e3dc;
+    color: #c0cac3;
+    font-style: italic;
+}
+
+.designTitle {
+    font-family: "Julius Sans One", sans-serif;
+    font-style: normal;
+    font-size: 1.2em;
+    color: #607476;
+}
+
+@media only screen and (min-width : 11132px) {
+
 }
