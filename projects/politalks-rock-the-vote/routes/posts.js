@@ -14,9 +14,9 @@ postRouter.route("/")
     })
     .post((req, res) => {
         const newPost = new PostModel(req.body);
-        newPost.save((err, addedPost) => {
+        newPost.save((err, newPost) => {
             if (err) return res.send(err);
-            res.status(201).send(addedPost);
+            res.status(201).send(newPost);
         })
     });
 
@@ -40,16 +40,16 @@ postRouter.route("/:id")
     })
 
     // DELETE many        
-    .delete((req, res) => {
-        CommentModel.deleteMany({ postId: req.params.id }, (err, deleteStatus) => {
-            if (err) return res.send(err);
-            PostModel.findOneAndRemove({ _id: req.params.id }, (err, deletedPost) => {
-                if (err) return res.send(err);
-                if (!deletedPost) return res.status(404).send({ message: "Post not found." })
-                res.status(200).send({ message: `'${deletedPost.title}' was has been deleted.` })
-            })
-        })
-    })
+    // .delete((req, res) => {
+    //     CommentModel.deleteMany({ postId: req.params.id }, (err, deleteStatus) => {
+    //         if (err) return res.send(err);
+    //         PostModel.findOneAndRemove({ _id: req.params.id }, (err, deletedPost) => {
+    //             if (err) return res.send(err);
+    //             if (!deletedPost) return res.status(404).send({ message: "Post not found." })
+    //             res.status(200).send({ message: `"${deletedPost.title}" has been deleted.` })
+    //         })
+    //     })
+    // })
 
     // PUT one
     .put((req, res) => {

@@ -8,8 +8,8 @@ const postSchema = new Schema({
         type: String
     },
     description: String,
-    upVotes: Number,
-    downVotes: Number
+    thumbsUp: Number,
+    thumbsDown: Number
 })
 
 const PostModel = mongoose.model("posts", postSchema);

@@ -4,7 +4,7 @@ import "./style.css";
 
 import Header from "./Header.js";
 import Nav from "./Nav.js";
-import PostItem from "../App/Posts/";
+// import Posts from "./Posts";
 import Home from "./Home";
 import Footer from "./Footer.js";
 
@@ -17,10 +17,7 @@ export default class App extends Component {
 
                 <Nav />
                 HELLO WORLD!
-                <PostItem />
-                <div>
-                    <Home />
-                </div>
+               <Home/>
 
                 <Footer />
             </div>

@@ -16,108 +16,110 @@ const postReducer = (state = initialState, action) => {
             }
         case "ADD_POST":
             return {
-                ...state,
-                data: [...state.data, action.post],
-                loading: false
+                data: [...state.data, action.post]
             }
         case "EDIT_POST":
             return {
                 ...state,
                 data: state.data.map(post => {
                     if (post._id === action.id) {
-                        return {...post, ...action.editedPost};
+                        console.log(action.updatedDeck)
+                        // return { ...post, ...action.editedPost };
                     } else {
-                        return post;
+                        return post
                     }
-                }),
-                loading: false
+                })
             }
         case "DELETE_POST":
             return {
-                ...state,
-                data: state.data.filter((post) => post._id !== action.id),
-                loading: false
+                data: state.data.filter((post, id) => id !== action.id).msp(post => {
+                    if (post._id === action.id) {
+                        return action.deletedPost
+                    } else {
+                        return post
+                    }
+                })
             }
+        
         case "ERR_MSG":
             return {
                 ...state,
-                errMsg: action.errMsg,
-                loading: false
+                loading: false,                
+                errMsg: action.errMsg
             }
         default:
             return state
     }
 }
 
+const politalks = "/posts/"
+
 export const getPosts = () => {
     return dispatch => {
-        axios.get(`/posts/ `)
-        .then(response => {
-            console.log(response.data);
-            dispatch({
-                type: "GET_POSTS",
-                posts: response.data
+        axios.get(politalks)
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: "GET_POSTS",
+                    posts: response.data
+                });
+            }).catch(err => {
+                dispatch({
+                    type: "ERR_MSG",
+                    errMsg: "Sorry, data unavailable."
+                });
             });
-        }).catch(err => {
-            dispatch({
-                type: "ERR_MSG",
-                errMsg: "Sorry, data unavailable!"
-            });
-        });
     }
 }
 
 export const addPost = (post) => {
     return dispatch => {
-        axios.post(`/post/`, post)
-        .then(response => {
-            console.log(response.data);
-            dispatch({
-                type: "ADD_POST",
-                post: response.data
-            });
-        }).catch(err => {
-            dispatch({
-                type: "ERR_MSG",
-                errMsg: "Sorry, data unavailable!"
-            });
-        });
-    }
-}
-export const deletePost = (id) => {
-    return dispatch => {
-        axios.delete(`/posts/${id}`)
-        .then(response => {
-            console.log(response.data);
-            dispatch({
-                type: "DELETE_POST",
-                id
-            });
-        }).catch(err => {
-            dispatch({
-                type: "ERR_MSG",
-                errMsg: "Sorry, data unavailable!"
-            });
-        });
+        axios.post(politalks, { ...post })
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: "ADD_POST",
+                    post: response.data
+                });
+            })
     }
 }
 
-export const editPost = (id, post) => {
+export const editPost = (id, editedPost) => {
     return dispatch => {
-        axios.put(`/posts/${id}`, post)
-        .then(response => {
-            console.log(response.data);
-            dispatch({
-                type: "EDIT_POST",
-                id,
-                editedPost: response.data
+        axios.put(politalks + id, editedPost)
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: "EDIT_POST",
+                    id: id,
+                    editedPost: response.data
+                });
+            }).catch(err => {
+                dispatch({
+                    type: "ERR_MSG",
+                    errMsg: "Sorry, data unavailable."
+                });
             });
-        }).catch(err => {
-            dispatch({
-                type: "ERR_MSG",
-                errMsg: "Sorry, data unavailable!"
+    }
+}
+
+export const deletePost = id => {
+    return dispatch => {
+        axios.delete(politalks + id)
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: "DELETE_POST",
+                    id: id,
+                    deletedPost: response.data
+                });
+            }).catch(err => {
+                dispatch({
+                    type: "ERR_MSG",
+                    errMsg: "Sorry, data unavailable."
+                });
             });
-        });
     }
 }
 

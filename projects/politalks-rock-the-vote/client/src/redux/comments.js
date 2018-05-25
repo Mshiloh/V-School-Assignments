@@ -11,7 +11,7 @@ const commentReducer = (state = initialState, action) => {
         case "GET_COMMENTS":
             return {
                 ...state,
-                data: [...state.data, ...action.comments],
+                data: action.comments,
                 loading: false
             }
         case "ADD_COMMENT":
@@ -23,25 +23,26 @@ const commentReducer = (state = initialState, action) => {
         case "DELETE_COMMENT":
             return {
                 ...state,
-                data: state.data.filter((comment) => comment._id !== action.idComment),
+                data: state.data.filter((comment) => comment._id !== action.id),
                 loading: false
             }
         case "ERR_MSG":
             return {
                 ...state,
-                errMsg: action.errMsg,
-                loading: false
+                loading: false,                
+                errMsg: action.errMsg
             }
         default:
             return state
     }
 }
 
+const politalks = "/comments/"
 
 // GET
 export const getComments = () => {
     return dispatch => {
-        axios.get(`/comments/`)
+        axios.get(`${politalks}`)
         .then(response => {
             console.log(response.data);
             dispatch({
@@ -51,18 +52,17 @@ export const getComments = () => {
         }).catch(err => {
             dispatch({
                 type: "ERR_MSG",
-                errMsg: "Sorry, data unavailable!"
+                errMsg: "Sorry, data unavailable."
             });
         });
     }
 }
 
 // ADD
-export const addComment = (comment) => {
+export const addComment = (comment, postId) => {
     return dispatch => {
-        axios.post(`/comments/`, comment)
+        axios.post(politalks, {...comment, postId})
         .then(response => {
-            console.log(response.data);
             dispatch({
                 type: "ADD_COMMENT",
                 comment: response.data
@@ -70,26 +70,26 @@ export const addComment = (comment) => {
         }).catch(err => {
             dispatch({
                 type: "ERR_MSG",
-                errMsg: "Sorry, data unavailable!"
+                errMsg: "Sorry, data unavailable."
             });
         });
     }
 }
 
 // DELETE
-export const deleteComment = (idComment) => {
+export const deleteComment = id => {
     return dispatch => {
-        axios.delete(`/comments/${idComment}`)
+        axios.delete(politalks + id)
         .then(response => {
             console.log(response.data);
             dispatch({
                 type: "DELETE_COMMENT",
-                idComment
+                id: id,
             });
         }).catch(err => {
             dispatch({
                 type: "ERR_MSG",
-                errMsg: "Sorry, data unavailable!"
+                errMsg: "Sorry, data unavailable."
             });
         });
     }

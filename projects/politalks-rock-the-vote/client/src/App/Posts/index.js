@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import { getPosts } from "../../redux/posts";
 
-// import PostItem from "./PostItem.js"
+import PostItem from "./PostItem.js"
 
 class Posts extends Component {
     componentDidMount() {
@@ -12,9 +12,8 @@ class Posts extends Component {
     }
     render() {
         const { data, loading, errMsg } = this.props;
-        const { title} = this.props.data;
-        // const { allPosts} = this.props;
-        // const allPosts = data((post, i) => <PostItem key={post + i} {...post}></PostItem>)
+        const allPosts = data.map((post, i) => <PostItem key={post + i} {...post}></PostItem>);
+       
         if (loading) {
             return (
                 <div>...Loading</div>
@@ -24,13 +23,11 @@ class Posts extends Component {
                 <div>{errMsg}</div>
             )
         } else {
-            return (
-                <div>
-                    {/* <PostItem/> */}
-                    {/* {allPosts} */}
-                    {title}
-                </div>
-            )
+        return (
+            <div>
+                {allPosts}
+            </div>
+           )
         }
     }
 }

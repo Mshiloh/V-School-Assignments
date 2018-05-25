@@ -1,11 +1,11 @@
 import React from "react";
 
-// import Posts from "../Posts/";
+import Posts from "../Posts/";
 
 function Home() {
     return (
-        <div>
-            {/* <Posts/> */}
+        <div className="home">
+            <Posts/>
         </div>
     )
 }

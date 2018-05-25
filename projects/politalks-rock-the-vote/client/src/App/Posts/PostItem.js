@@ -1,10 +1,12 @@
 import React from "react";
 
 function PostItem(props) {
-    const {title, _id} = props;
+    const {title, description, content} = props;
     return (
         <div>
-            <div>{title}</div>
+            {title}
+            {description}
+            {content}
         </div>
     )
 }

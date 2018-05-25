@@ -18,6 +18,7 @@ body {
     color: #325050;
     background: #fff;
     font-size: 70%;
+    height: 100%;
 }
 
 .conatiner {
@@ -199,7 +200,7 @@ footer {
     padding: 10px;
 }
 
-.sidebar {
+.linkSection {
     display: block;
     list-style: none;
     overflow: hidden;
@@ -243,13 +244,15 @@ ul {
     list-style: none;
 }
 
+/* similar to making a striped list */
+
 .designItem li:nth-child(2n+1),
-.zen li:nth-child(2n+1) {
+.resource li:nth-child(2n+1) {
     clear: left;
 }
 
 .designItem ul,
-.zen ul {
+.resource ul {
     margin: 0;
     color: #616857;
 }
@@ -268,7 +271,7 @@ ul {
 }
 
 .designItem li,
-.zen li {
+.resource li {
     float: left;
     width: 50%;
     padding: 1.5em 5%;
@@ -284,6 +287,79 @@ ul {
     color: #607476;
 }
 
-@media only screen and (min-width : 11132px) {
-
+@media only screen and (min-width: 1132px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr .5fr;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+        grid-template-areas: 
+        "hdr hdr" 
+        "enl dsl" 
+        "prt rsc" 
+        "req green" 
+        "bok bok" 
+        "ftr ftr"
+    }
+    header {
+        grid-area: hdr;
+    }
+    .viewAllContainer,
+    .viewAll {
+        grid-area: view;
+    }
+    .viewAllContainer {
+        font-family: "Julius Sans One", sans-serif;
+        color: rgba(255, 255, 255, 0.65);
+        background-color: rgba(255, 255, 255, 0.233);
+        z-index: 2;
+        font-size: 1.2em;
+        width: 30%;
+        text-align: center;
+        bottom: 0;
+    }
+    .viewAll {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        bottom: 0;
+    }
+    .arrow {
+        font-family: "verdemoderna";
+        font-size: 90px;
+        padding: 0;
+        margin: 0;
+        width: 50px;
+    }
+    .linkSection{
+        background-color: rgba(138,188,159,0.5);
+    }
+    .enlightenment {
+        grid-area: enl;
+    }
+    .designList {
+        grid-area: dsl;
+        background: #edf4f000;
+        width: 100vw;
+        padding: 0;
+    }
+    .participation {
+        grid-area: prt;
+    }
+    .resource {
+        grid-area: rsc;
+    }
+    .requirements {
+        grid-area: req;
+    }
+    .green {
+        grid-area: gre;
+    }
+    .bookRef {
+        grid-area: bok;
+    }
+    footer {
+        grid-area: ftr;
+    }
 }
