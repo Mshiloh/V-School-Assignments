@@ -1,0 +1,61 @@
+.postForm {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.createPostButt {
+    cursor: pointer;
+    background: darkred;
+    color: white;
+    border: 1px solid darkred;
+    padding: 10px;
+    font-family: "Patua One", serif;
+    text-align: left;
+    letter-spacing: 1.8px;
+    width: 100%;
+    font-size: 1.6em;
+}
+
+.createPostButt:hover {
+    font-size: 1.8em;
+}
+
+.createPostButt:focus,
+.submitButt:focus {
+    outline: none;
+}
+
+.newDescription,
+.newTitle {
+    border: 3px solid darkred;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 70%;
+    font-size: 1.3em;
+}
+
+input:focus {
+    outline: darkblue;
+    border: 3px solid darkblue;
+}
+
+.submitButt {
+    cursor: pointer;
+    background: darkred;
+    color: white;
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Patua One", serif;
+    letter-spacing: 1.8px;
+    font-size: 1.3em;
+}
+
+.submitButt:hover {
+    background: darkblue;
+}

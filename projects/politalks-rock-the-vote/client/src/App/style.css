@@ -37,7 +37,9 @@ font-family: 'Questrial', sans-serif;
     background-size: cover;
     background-position: center;
     font-family: "Patua One", serif;
+    letter-spacing: 1.8px;    
     color: whitesmoke;
+    min-height: 250px;
     font-size: 4.5em;
 }
 
@@ -49,7 +51,7 @@ font-family: 'Questrial', sans-serif;
     align-items: center;
     background: darkblue;
     padding: 10px;
-    font-family: "Questrial", serif;
+    font-family: "Quicksand", serif;
     color: whitesmoke;
     font-weight: 600;
     font-size: 1.2em;
@@ -57,6 +59,7 @@ font-family: 'Questrial', sans-serif;
 
 .home {
     grid-area: con;
+    margin: 50px;    
 }
 
 .footer {
@@ -65,7 +68,7 @@ font-family: 'Questrial', sans-serif;
     align-items: center;
     background: darkblue;
     padding: 10px;
-    font-family: "Questrial", serif;
+    font-family: "Quicksand", serif;
     color: whitesmoke;
     font-size: 1.1em;
 }

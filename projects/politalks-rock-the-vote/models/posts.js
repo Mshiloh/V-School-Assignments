@@ -7,9 +7,14 @@ const postSchema = new Schema({
         required: true,
         type: String
     },
-    description: String,
-    thumbsUp: Number,
-    thumbsDown: Number
+    description: {
+        required: true,
+        type: String
+    },
+    votes: {
+        type: Number, 
+        default: 0
+        }
 })
 
 const PostModel = mongoose.model("posts", postSchema);

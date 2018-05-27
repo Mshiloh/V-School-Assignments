@@ -6,6 +6,9 @@ import { getPosts } from "../../redux/posts";
 
 import PostItem from "./PostItem.js"
 
+
+import "./style.css";
+
 class Posts extends Component {
     componentDidMount() {
         this.props.getPosts();
@@ -13,7 +16,7 @@ class Posts extends Component {
     render() {
         const { data, loading, errMsg } = this.props;
         const allPosts = data.map((post, i) => <PostItem key={post + i} {...post}></PostItem>);
-       
+
         if (loading) {
             return (
                 <div>...Loading</div>
@@ -23,11 +26,11 @@ class Posts extends Component {
                 <div>{errMsg}</div>
             )
         } else {
-        return (
-            <div>
-                {allPosts}
-            </div>
-           )
+            return (
+                <div className="postContainer">
+                    {allPosts}
+                </div>
+            )
         }
     }
 }

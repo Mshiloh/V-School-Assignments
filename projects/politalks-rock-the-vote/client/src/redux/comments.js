@@ -18,13 +18,21 @@ const commentReducer = (state = initialState, action) => {
             return {
                 ...state,
                 data: [...state.data, action.comment],
-                loading: false
+            }
+            case "EDIT_COMMENT":
+            return {
+                ...state,
+                data: state.data.map(comment => {
+                    if (comment._id === action.id) {
+                        return action.updatedComment
+                    } else {
+                        return comment
+                    }
+                })
             }
         case "DELETE_COMMENT":
             return {
-                ...state,
-                data: state.data.filter((comment) => comment._id !== action.id),
-                loading: false
+                data: state.data.filter((comment) => comment._id !== action.id)
             }
         case "ERR_MSG":
             return {
@@ -73,6 +81,25 @@ export const addComment = (comment, postId) => {
                 errMsg: "Sorry, data unavailable."
             });
         });
+    }
+}
+
+export const editComment = (id, updatedComment) => {
+    return dispatch => {
+        axios.put(politalks + id, updatedComment)
+            .then(response => {
+                dispatch({
+                    type: "EDIT_Comment",
+                    id: id,
+                    updatedComment: response.data
+                })
+            })
+            .catch(err => {
+                dispatch({
+                    type: "ERR_MSG",
+                    errMsg: "Sorry, your data is unavailable."
+                });
+            })
     }
 }
 

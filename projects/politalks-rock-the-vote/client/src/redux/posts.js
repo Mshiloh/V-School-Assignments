@@ -23,8 +23,7 @@ const postReducer = (state = initialState, action) => {
                 ...state,
                 data: state.data.map(post => {
                     if (post._id === action.id) {
-                        console.log(action.updatedDeck)
-                        // return { ...post, ...action.editedPost };
+                        console.log(action.post)
                     } else {
                         return post
                     }
@@ -32,7 +31,7 @@ const postReducer = (state = initialState, action) => {
             }
         case "DELETE_POST":
             return {
-                data: state.data.filter((post, id) => id !== action.id).msp(post => {
+                data: state.data.filter((post, id) => id !== action.id).map(post => {
                     if (post._id === action.id) {
                         return action.deletedPost
                     } else {
@@ -89,12 +88,13 @@ export const editPost = (id, editedPost) => {
     return dispatch => {
         axios.put(politalks + id, editedPost)
             .then(response => {
-                console.log(response.data);
                 dispatch({
                     type: "EDIT_POST",
-                    id: id,
-                    editedPost: response.data
+                    editedPost: response.data,
+                    id
                 });
+                console.log(editedPost)
+                
             }).catch(err => {
                 dispatch({
                     type: "ERR_MSG",
