@@ -2,7 +2,6 @@
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
   margin: 0;
-  /* font-weight: 900; */
 }
 
 @font-face {
@@ -10,7 +9,7 @@
   src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
 }
 
-@font-face {
+/* @font-face {
   font-family: "Slim Joe";
   src: local("Slim Joe"), url("Slim Joe.otf");
 }
@@ -21,7 +20,7 @@
   src: url('SlimJoe.eot?#iefix') format('embedded-opentype'), url('SlimJoe.woff2') format('woff2'), url('SlimJoe.woff') format('woff'), url('SlimJoe.ttf') format('truetype'), url("Slim Joe.otf") format("opentype"), url('Slim Joe.svg') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 /* ----------- NAV ----------- */
 
