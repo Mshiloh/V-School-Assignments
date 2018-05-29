@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "ZonaPro ExtraLight";
+    src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: "Slim Joe";
+    src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
 .contactWrapper {
     padding: 20px;
     font-weight: 900;
@@ -232,6 +242,7 @@ button {
         width: 8vw;
     }
 }
+
 @media only screen and (min-width: 1200px) {
     .phoneText,
     .emailText {

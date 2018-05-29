@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "ZonaPro ExtraLight";
+  src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
+}
+
+@font-face {
+  font-family: "Slim Joe";
+  src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
 .projectsContainer {
   grid-area: prj;
   display: flex;
