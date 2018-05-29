@@ -16,12 +16,11 @@
 }
 
 @font-face {
-  font-family: 'slim_joeregular';
-  src: url('slim_joe-webfont.woff2') format('woff2'),
-       url('slim_joe-webfont.woff') format('woff');
+  font-family: 'Slim Joe';
+  src: url('SlimJoe.eot');
+  src: url('SlimJoe.eot?#iefix') format('embedded-opentype'), url('SlimJoe.woff2') format('woff2'), url('SlimJoe.woff') format('woff'), url('SlimJoe.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -90,7 +89,6 @@ header {
   text-align: center;
   font-family: "Slim Joe";
   /* font-family: "Nectar Regular"; */
-  
   margin-top: 4vh;
   font-size: 11vw;
 }
@@ -154,7 +152,6 @@ header {
 /* ----------- GLOBAL ----------- */
 
 .contentWrapper {
-  
   background-image: url("https://i.imgur.com/AOQD1Ab.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -190,7 +187,6 @@ header {
 
 .projectSubhead {
   font-family: "ZonaPro ExtraLight";
-  
 }
 
 hr {
@@ -207,7 +203,6 @@ hr {
 
 .bottomHr {
   margin-bottom: 5vh;
-  
 }
 
 /* ----------- FOOTER ----------- */
@@ -258,29 +253,27 @@ footer {
   width: auto;
 }
 
-
-
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+
+@media only screen and (min-width: 768px) {
   .sectionHeader {
     font-size: 5vw;
   }
 }
 
- /* Small Devices, Tablets */
- @media only screen and (min-width : 768px) {
+/* Small Devices, Tablets */
 
-}
+@media only screen and (min-width: 768px) {}
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
 
-}
+@media only screen and (min-width: 992px) {}
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1050px) {
+
+@media only screen and (min-width: 1050px) {
   nav {
- height: 5vw;
+    height: 5vw;
   }
   .sectionHeader {
     font-size: 4vw;
@@ -288,20 +281,20 @@ footer {
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+
+@media only screen and (min-width: 1200px) {
   nav {
     height: 4vw;
   }
   .nav {
     font-size: 1.8vw;
-
   }
   .sectionHeader {
     font-size: 3.5vw;
   }
   footer {
-  font-size: 2.1vw;
-  padding: 5px;
+    font-size: 2.1vw;
+    padding: 5px;
   }
 }
 
@@ -313,12 +306,11 @@ footer {
   }
   .nav {
     font-size: 1.8vw;
-
   }
   .sectionHeader {
     font-size: 3.5vw;
   }
   footer {
-  font-size: 2vw;
+    font-size: 2vw;
   }
 }
