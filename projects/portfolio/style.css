@@ -11,6 +11,11 @@
 }
 
 @font-face {
+  font-family: "Slim Joe";
+  src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
+@font-face {
   font-family: 'Slim Joe';
   src: url('SlimJoe.eot');
   src: url('SlimJoe.eot?#iefix') format('embedded-opentype'), url('SlimJoe.woff2') format('woff2'), url('SlimJoe.woff') format('woff'), url('SlimJoe.ttf') format('truetype'), url("Slim Joe.otf") format("opentype");
