@@ -84,6 +84,7 @@ header {
   text-align: center;
   font-family: "Slim Joe";
   /* font-family: "Nectar Regular"; */
+  font-family: "ZonaPro ExtraLight";
   margin-top: 4vh;
   font-size: 11vw;
 }
@@ -176,6 +177,7 @@ header {
   padding: 5px;
   font-family: "Slim Joe";
   /* font-family: "Nectar Regular"; */
+  font-family: "ZonaPro ExtraLight";
   font-size: 7vw;
   width: 80vw;
 }
@@ -218,6 +220,7 @@ footer {
   align-items: center;
   font-family: "Slim Joe";
   /* font-family: "Nectar Regular"; */
+  font-family: "ZonaPro ExtraLight";
   color: white;
   font-size: 5vw;
 }
