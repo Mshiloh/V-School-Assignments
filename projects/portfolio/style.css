@@ -16,8 +16,12 @@
 }
 
 @font-face {
-  font-family: "Slim Joe";
-  src: local("Slim Joe"), url("Slim Joe.otf");
+  font-family: 'slim_joeregular';
+  src: url('slim_joe-webfont.woff2') format('woff2'),
+       url('slim_joe-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 @font-face {
@@ -85,7 +89,7 @@ header {
   grid-area: bnr;
   text-align: center;
   font-family: "Slim Joe";
-  font-family: "Nectar Regular";
+  /* font-family: "Nectar Regular"; */
   
   margin-top: 4vh;
   font-size: 11vw;
@@ -179,7 +183,7 @@ header {
   margin: 0;
   padding: 5px;
   font-family: "Slim Joe";
-  font-family: "Nectar Regular";
+  /* font-family: "Nectar Regular"; */
   font-size: 7vw;
   width: 80vw;
 }
@@ -223,7 +227,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   font-family: "Slim Joe";
-  font-family: "Nectar Regular";
+  /* font-family: "Nectar Regular"; */
   color: white;
   font-size: 5vw;
 }
