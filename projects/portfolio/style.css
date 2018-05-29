@@ -11,25 +11,11 @@
 }
 
 @font-face {
-  font-family: "ZonaPro Bold";
-  src: local("ZonaPro-Bold"), url("ZonaPro-Bold.otf");
-}
-
-@font-face {
   font-family: 'Slim Joe';
   src: url('SlimJoe.eot');
-  src: url('SlimJoe.eot?#iefix') format('embedded-opentype'), 
-  url('SlimJoe.woff2') format('woff2'), 
-  url('SlimJoe.woff') format('woff'), 
-  url('SlimJoe.ttf') format('truetype'),
-  url("Slim Joe.otf") format("opentype");
+  src: url('SlimJoe.eot?#iefix') format('embedded-opentype'), url('SlimJoe.woff2') format('woff2'), url('SlimJoe.woff') format('woff'), url('SlimJoe.ttf') format('truetype'), url("Slim Joe.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Nectar Regular";
-  src: local("Nectar Regular"), url("Nectar Regular.otf");
 }
 
 /* ----------- NAV ----------- */
