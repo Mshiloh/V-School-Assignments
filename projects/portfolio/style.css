@@ -20,6 +20,11 @@
   src: local("Slim Joe"), url("Slim Joe.otf");
 }
 
+@font-face {
+  font-family: "Nectar Regular";
+  src: local("Nectar Regular"), url("Nectar Regular.otf");
+}
+
 /* ----------- NAV ----------- */
 
 nav {
@@ -80,6 +85,8 @@ header {
   grid-area: bnr;
   text-align: center;
   font-family: "Slim Joe";
+  font-family: "Nectar Regular";
+  
   margin-top: 4vh;
   font-size: 11vw;
 }
@@ -172,8 +179,14 @@ header {
   margin: 0;
   padding: 5px;
   font-family: "Slim Joe";
+  font-family: "Nectar Regular";
   font-size: 7vw;
   width: 80vw;
+}
+
+.projectSubhead {
+  font-family: "ZonaPro ExtraLight";
+  
 }
 
 hr {
@@ -210,6 +223,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   font-family: "Slim Joe";
+  font-family: "Nectar Regular";
   color: white;
   font-size: 5vw;
 }
